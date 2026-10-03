@@ -15,6 +15,10 @@
   <meta property="og:image" content="assets/avatar_square.png">
   <meta property="og:url" content="https://alaminakram.netlify.app/">
   
+  <!-- Favicon / Stock Profile Icon -->
+  <link rel="icon" type="image/png" href="assets/avatar_square.png">
+  <link rel="apple-touch-icon" href="assets/avatar_square.png">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +39,10 @@
   <header class="navbar-container" id="header">
     <nav class="navbar" aria-label="Main Navigation">
       <a href="#hero" class="brand-logo" aria-label="Al-Amin Akram Home">
-        <span class="logo-mark">AA</span>
+        <div class="logo-profile-icon">
+          <img src="assets/avatar_square.png" alt="Muhammad Noor Al-Amin" class="stock-avatar-img">
+          <span class="stock-avatar-status"></span>
+        </div>
         <div class="logo-text">
           <span class="name">Al-Amin Akram</span>
           <span class="tag">Software Engineer</span>
@@ -85,7 +92,10 @@
   <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
     <div class="drawer-header">
       <div class="brand-logo">
-        <span class="logo-mark">AA</span>
+        <div class="logo-profile-icon">
+          <img src="assets/avatar_square.png" alt="Muhammad Noor Al-Amin" class="stock-avatar-img">
+          <span class="stock-avatar-status"></span>
+        </div>
         <span class="name">Al-Amin Akram</span>
       </div>
       <button id="closeDrawerBtn" class="action-btn icon-btn" aria-label="Close Menu">
@@ -479,7 +489,7 @@
           <!-- Project 1: eSawah360 Smart Agriculture IoT -->
           <div class="project-card glass-card" data-category="iot">
             <div class="project-media">
-              <img src="assets/esawah_iot.svg" alt="eSawah360 IoT Architecture" class="project-img">
+              <img src="assets/project_esawah.jpg" alt="eSawah360 LoRaWAN IoT Smart Agriculture" class="project-img">
               <div class="project-overlay">
                 <button class="btn btn-sm btn-primary view-project-btn" data-project="esawah">
                   <i class="fa-solid fa-eye"></i> <span data-i18n="proj.viewDetails">View Case Study</span>
@@ -510,7 +520,7 @@
           <!-- Project 2: Majlis Bandaraya Ipoh Dashboards -->
           <div class="project-card glass-card" data-category="dashboards">
             <div class="project-media">
-              <img src="assets/mbi_dashboard.svg" alt="MBI Departmental Dashboards" class="project-img">
+              <img src="assets/project_mbi.jpg" alt="MBI Departmental Dashboards" class="project-img">
               <div class="project-overlay">
                 <button class="btn btn-sm btn-primary view-project-btn" data-project="mbi">
                   <i class="fa-solid fa-eye"></i> <span data-i18n="proj.viewDetails">View Case Study</span>
@@ -541,7 +551,7 @@
           <!-- Project 3: Miker Signature Performance System -->
           <div class="project-card glass-card" data-category="web">
             <div class="project-media">
-              <img src="assets/miker_system.svg" alt="Miker Signature Employee Performance Assessment System" class="project-img">
+              <img src="assets/project_miker.jpg" alt="Miker Signature Employee Performance Assessment System" class="project-img">
               <div class="project-overlay">
                 <button class="btn btn-sm btn-primary view-project-btn" data-project="miker">
                   <i class="fa-solid fa-eye"></i> <span data-i18n="proj.viewDetails">View Case Study</span>
@@ -572,7 +582,7 @@
           <!-- Project 4: Warga Emas Celik Digital -->
           <div class="project-card glass-card" data-category="community">
             <div class="project-media">
-              <img src="assets/warga_emas.svg" alt="Warga Emas Celik Digital Program" class="project-img">
+              <img src="assets/project_wargaemas.jpg" alt="Warga Emas Celik Digital Program" class="project-img">
               <div class="project-overlay">
                 <button class="btn btn-sm btn-primary view-project-btn" data-project="wargaemas">
                   <i class="fa-solid fa-eye"></i> <span data-i18n="proj.viewDetails">View Case Study</span>

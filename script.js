@@ -294,16 +294,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Current Language state
-  let currentLang = localStorage.getItem('site_lang') || 'en';
-  document.documentElement.setAttribute('data-lang', currentLang);
-  updateLanguageUI(currentLang);
-
+  // -------------------------------------------------------------------------
+  // 1. Multilingual Toggle Engine (EN & BM)
+  // -------------------------------------------------------------------------
   const langToggleBtn = document.getElementById('langToggleBtn');
   const langFlag = document.getElementById('langFlag');
   const langText = document.getElementById('langText');
 
+  let currentLang = localStorage.getItem('site_lang') || 'en';
+
   function updateLanguageUI(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
@@ -311,22 +313,29 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    if (lang === 'bm') {
-      langFlag.textContent = '🇬🇧';
-      langText.textContent = 'EN';
-    } else {
-      langFlag.textContent = '🇲🇾';
-      langText.textContent = 'BM';
+    if (langFlag && langText) {
+      if (lang === 'bm') {
+        langFlag.textContent = '🇬🇧';
+        langText.textContent = 'EN';
+      } else {
+        langFlag.textContent = '🇲🇾';
+        langText.textContent = 'BM';
+      }
     }
   }
 
-  langToggleBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'en' ? 'bm' : 'en';
-    localStorage.setItem('site_lang', currentLang);
-    document.documentElement.setAttribute('data-lang', currentLang);
-    updateLanguageUI(currentLang);
-    showToast(currentLang === 'bm' ? 'Bahasa ditukar ke Bahasa Melayu' : 'Language switched to English');
-  });
+  // Initialize Language
+  updateLanguageUI(currentLang);
+
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentLang = currentLang === 'en' ? 'bm' : 'en';
+      localStorage.setItem('site_lang', currentLang);
+      updateLanguageUI(currentLang);
+      showToast(currentLang === 'bm' ? 'Bahasa ditukar ke Bahasa Melayu' : 'Language switched to English');
+    });
+  }
 
   // -------------------------------------------------------------------------
   // 2. Theme Switcher (Dark / Light Mode)
@@ -337,21 +346,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    if (theme === 'light') {
-      themeIcon.classList.replace('fa-moon', 'fa-sun');
-    } else {
-      themeIcon.classList.replace('fa-sun', 'fa-moon');
+    if (themeIcon) {
+      if (theme === 'light') {
+        themeIcon.className = 'fa-solid fa-sun theme-icon';
+      } else {
+        themeIcon.className = 'fa-solid fa-moon theme-icon';
+      }
     }
     localStorage.setItem('site_theme', theme);
   }
 
+  // Initialize Theme
   applyTheme(currentTheme);
 
-  themeToggleBtn.addEventListener('click', () => {
-    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    applyTheme(currentTheme);
-    showToast(currentTheme === 'dark' ? 'Dark Mode Activated' : 'Light Mode Activated');
-  });
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(currentTheme);
+      showToast(currentTheme === 'dark' ? 'Dark Mode Activated' : 'Light Mode Activated');
+    });
+  }
 
   // -------------------------------------------------------------------------
   // 3. Mobile Navigation Drawer
@@ -433,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "eSawah360: Smart Paddy Field LoRaWAN IoT Ecosystem",
       html: `
         <div style="margin-bottom: 20px;">
-          <img src="assets/esawah_iot.svg" alt="eSawah360 IoT Architecture" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px;">
+          <img src="assets/project_esawah.jpg" alt="eSawah360 IoT Architecture" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px; aspect-ratio: 16/9; object-fit: cover;">
           <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Engineering Scope & Problem Statement</h4>
           <p style="margin-bottom: 14px;">Traditional paddy farming in Malaysia faces unpredictable irrigation cycles, soil pH imbalances, and unmonitored water levels leading to crop yield losses. Simple Advantage Sdn. Bhd. initiated eSawah360 to bring precision agriculture IoT to commercial rice farming.</p>
           
@@ -458,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "MBI Geospatial City Dashboards & Route Optimization",
       html: `
         <div style="margin-bottom: 20px;">
-          <img src="assets/mbi_dashboard.svg" alt="MBI Departmental Dashboards" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px;">
+          <img src="assets/project_mbi.jpg" alt="MBI Departmental Dashboards" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px; aspect-ratio: 16/9; object-fit: cover;">
           <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Municipal Challenge</h4>
           <p style="margin-bottom: 14px;">Majlis Bandaraya Ipoh (MBI) needed consolidated, fast-loading visual dashboards for three critical civic branches: <strong>Enforcement</strong>, <strong>Licensing</strong>, and <strong>Treasury</strong> to streamline municipal surveillance and revenue recovery.</p>
           
@@ -482,7 +497,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Miker Signature Employee Performance Assessment System",
       html: `
         <div style="margin-bottom: 20px;">
-          <img src="assets/miker_system.svg" alt="Miker System Architecture" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px;">
+          <img src="assets/project_miker.jpg" alt="Miker System Architecture" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px; aspect-ratio: 16/9; object-fit: cover;">
           <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Executive Problem Statement</h4>
           <p style="margin-bottom: 14px;">Miker Signature faced operational inefficiencies relying on fragmented physical evaluation forms and manual scoring for staff across multiple restaurant departments. This created review backlogs, subjective bias, and delayed managerial decision-making.</p>
           
@@ -507,7 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Warga Emas Celik Digital — Kg. Budiman",
       html: `
         <div style="margin-bottom: 20px;">
-          <img src="assets/warga_emas.svg" alt="Warga Emas Celik Digital Modules" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px;">
+          <img src="assets/project_wargaemas.jpg" alt="Warga Emas Celik Digital Modules" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px; aspect-ratio: 16/9; object-fit: cover;">
           <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Program Vision & Community Context</h4>
           <p style="margin-bottom: 14px;">Organized under the Service Learning Malaysia (SULAM) framework in direct partnership with Jawatankuasa Pembangunan dan Keselamatan Kampung (JPKK) Kampung Budiman. Addressed the digital divide among elderly rural residents.</p>
           

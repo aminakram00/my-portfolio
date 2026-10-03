@@ -418,6 +418,8 @@ img, svg {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
+  text-decoration: none;
   transition: transform var(--transition-fast);
 }
 
@@ -425,13 +427,55 @@ img, svg {
   transform: translateY(-1px);
 }
 
+.logo-profile-icon {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  padding: 2px;
+  background: var(--grad-primary);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo:hover .logo-profile-icon {
+  transform: scale(1.06);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
+}
+
+.stock-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  background: #1e293b;
+}
+
+.stock-avatar-status {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: var(--accent-mint);
+  border: 2px solid var(--bg-surface);
+  box-shadow: 0 0 6px var(--accent-mint);
+}
+
 .logo-mark {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-md);
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
   background: var(--grad-primary);
   color: #ffffff;
   font-family: var(--font-display);
@@ -449,6 +493,8 @@ img, svg {
 .logo-text {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .logo-text .name {
@@ -459,6 +505,7 @@ img, svg {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .logo-text .tag {
@@ -467,6 +514,7 @@ img, svg {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .nav-links {
