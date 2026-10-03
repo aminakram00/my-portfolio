@@ -417,38 +417,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // -------------------------------------------------------------------------
-  // 5. Hostinger Interactive Project Filter Pills
-  // -------------------------------------------------------------------------
-  const filterPills = document.querySelectorAll('.hostinger-filter-bar .filter-pill');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      filterPills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-
-      const filterVal = pill.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filterVal === 'all' || category === filterVal) {
-          card.style.display = 'flex';
-          requestAnimationFrame(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          });
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(12px)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 250);
-        }
-      });
-    });
-  });
-
-  // -------------------------------------------------------------------------
   // 6. Interactive Case Study Modals (Updated for eSawah360 & MBI)
   // -------------------------------------------------------------------------
   const caseStudyModal = document.getElementById('caseStudyModal');
@@ -623,11 +591,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const subject = document.getElementById('contactSubject').value;
     const message = document.getElementById('contactMessage').value;
 
+    const submitBtn = document.getElementById('submitFormBtn');
+    if (submitBtn) {
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Preparing Email...</span>`;
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }, 2500);
+    }
+
     const mailtoBody = encodeURIComponent(`From: ${name} (${email})\n\nSubject: ${subject}\n\nMessage:\n${message}`);
     const mailtoUrl = `mailto:alaminakram21@gmail.com?subject=${encodeURIComponent(subject + " - " + name)}&body=${mailtoBody}`;
 
     window.location.href = mailtoUrl;
-    showToast("Opening email client... You can also chat via WhatsApp!");
+    showToast("Opening email client... You can also chat directly via WhatsApp!");
     contactForm.reset();
   });
 
@@ -650,7 +630,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
-  // 11. Active Scrollspy for Navbar
+  // 11. Interactive Button Ripple System
+  // -------------------------------------------------------------------------
+  const interactiveElements = document.querySelectorAll('.btn, .action-btn, .quick-contact-pill, .view-project-btn, .social-link');
+  interactiveElements.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      const circle = document.createElement('span');
+      circle.classList.add('ripple-wave');
+
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+
+      circle.style.width = circle.style.height = `${size}px`;
+      circle.style.left = `${x}px`;
+      circle.style.top = `${y}px`;
+
+      this.appendChild(circle);
+
+      setTimeout(() => {
+        circle.remove();
+      }, 600);
+    });
+  });
+
+  // -------------------------------------------------------------------------
+  // 12. Active Scrollspy for Navbar
   // -------------------------------------------------------------------------
   const sections = document.querySelectorAll('section[id]');
   const navLinksList = document.querySelectorAll('.nav-link');
