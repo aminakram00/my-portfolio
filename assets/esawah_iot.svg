@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="esBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061a14"/>
+      <stop offset="100%" stop-color="#0b291e"/>
+    </linearGradient>
+    <linearGradient id="esGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="url(#esBg)"/>
+  <circle cx="680" cy="120" r="160" fill="#10b981" fill-opacity="0.12" filter="blur(40px)"/>
+  
+  <!-- Header bar -->
+  <rect x="30" y="25" width="740" height="44" rx="8" fill="#0d3326" stroke="#164e3b" stroke-width="1"/>
+  <text x="50" y="52" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold">🌾 eSawah360 • Smart Agriculture IoT Architecture</text>
+  <rect x="570" y="37" width="180" height="20" rx="4" fill="#10b981" fill-opacity="0.2"/>
+  <text x="585" y="51" fill="#6ee7b7" font-family="sans-serif" font-size="10" font-weight="bold">LoRaWAN & SENSOR TELEMETRY</text>
+
+  <!-- Node 1: LoRaWAN Field Sensors -->
+  <rect x="50" y="110" width="210" height="340" rx="12" fill="#09241b" stroke="#10b981" stroke-width="1.5"/>
+  <circle cx="155" cy="170" r="35" fill="#047857" fill-opacity="0.2" stroke="#10b981" stroke-width="2"/>
+  <text x="155" y="178" fill="#34d399" font-family="sans-serif" font-size="24" text-anchor="middle">📡</text>
+  <text x="155" y="230" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">LoRaWAN Nodes</text>
+  <text x="155" y="255" fill="#a7f3d0" font-family="sans-serif" font-size="11" text-anchor="middle">Paddy Field Telemetry</text>
+  <rect x="70" y="285" width="170" height="40" rx="6" fill="#061a14"/>
+  <text x="155" y="308" fill="#34d399" font-family="sans-serif" font-size="11" text-anchor="middle">💧 Soil Moisture & pH</text>
+  <rect x="70" y="335" width="170" height="40" rx="6" fill="#061a14"/>
+  <text x="155" y="358" fill="#38bdf8" font-family="sans-serif" font-size="11" text-anchor="middle">🌡️ Ambient Temp / Humidity</text>
+  <rect x="70" y="385" width="170" height="40" rx="6" fill="#061a14"/>
+  <text x="155" y="408" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">🌊 Water Level Sensors</text>
+
+  <!-- Node 2: Gateway & IoT Backend -->
+  <rect x="295" y="110" width="210" height="340" rx="12" fill="#09241b" stroke="#06b6d4" stroke-width="1.5"/>
+  <circle cx="400" cy="170" r="35" fill="#0e7490" fill-opacity="0.2" stroke="#06b6d4" stroke-width="2"/>
+  <text x="400" y="178" fill="#38bdf8" font-family="sans-serif" font-size="24" text-anchor="middle">⚡</text>
+  <text x="400" y="230" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Gateway & API</text>
+  <text x="400" y="255" fill="#bae6fd" font-family="sans-serif" font-size="11" text-anchor="middle">Simple Advantage Stack</text>
+  <rect x="315" y="285" width="170" height="40" rx="6" fill="#061a14"/>
+  <text x="400" y="308" fill="#38bdf8" font-family="sans-serif" font-size="11" text-anchor="middle">MQTT / REST Ingestion</text>
+  <rect x="315" y="335" width="170" height="40" rx="6" fill="#061a14"/>
+  <text x="400" y="358" fill="#a855f7" font-family="sans-serif" font-size="11" text-anchor="middle">Real-Time Rule Engine</text>
+  <rect x="315" y="385" width="170" height="40" rx="6" fill="#061a14"/>
+  <text x="400" y="408" fill="#10b981" font-family="sans-serif" font-size="11" text-anchor="middle">Threshold Alert SMS/Bot</text>
+
+  <!-- Node 3: Analytics & PDRM/CIDB Prototype Dashboard -->
+  <rect x="540" y="110" width="210" height="340" rx="12" fill="#09241b" stroke="#a855f7" stroke-width="1.5"/>
+  <circle cx="645" cy="170" r="35" fill="#7e22ce" fill-opacity="0.2" stroke="#a855f7" stroke-width="2"/>
+  <text x="645" y="178" fill="#c084fc" font-family="sans-serif" font-size="24" text-anchor="middle">📊</text>
+  <text x="645" y="230" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Antigravity AI Prototypes</text>
+  <text x="645" y="255" fill="#e9d5ff" font-family="sans-serif" font-size="11" text-anchor="middle">PDRM, CIDB & Smart Agro</text>
+  <rect x="560" y="285" width="170" height="40" rx="6" fill="#061a14"/>
+  <text x="645" y="308" fill="#c084fc" font-family="sans-serif" font-size="11" text-anchor="middle">Geospatial Mapping</text>
+  <rect x="560" y="335" width="170" height="40" rx="6" fill="#061a14"/>
+  <text x="645" y="358" fill="#34d399" font-family="sans-serif" font-size="11" text-anchor="middle">Yield Prediction Models</text>
+  <rect x="560" y="385" width="170" height="40" rx="6" fill="#061a14"/>
+  <text x="645" y="408" fill="#38bdf8" font-family="sans-serif" font-size="11" text-anchor="middle">Automated Auditing</text>
+</svg>

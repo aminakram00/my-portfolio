@@ -1,6 +1,7 @@
 /**
  * AL-AMIN AKRAM PORTFOLIO INTERACTION ENGINE
  * Multilingual (EN/BM), Theme Switcher, Modals, Filter, AI Assistant Q&A
+ * Updated with Latest Resume: Simple Advantage, eSawah360 IoT, MBI Dashboards, Degrees
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const translations = {
     en: {
       "nav.about": "About",
-      "nav.education": "Education",
       "nav.experience": "Experience",
       "nav.projects": "Projects",
+      "nav.education": "Education",
       "nav.leadership": "Leadership",
       "nav.publications": "Publications",
       "nav.skills": "Skills",
@@ -21,108 +22,113 @@ document.addEventListener('DOMContentLoaded', () => {
       "nav.home": "Home",
       "nav.hostingGuide": "Free Domain Guide",
 
-      "hero.status": "Actively Seeking Internship & Immediate Roles",
+      "hero.status": "Software Engineer & Developer • Open to High-Impact Opportunities",
       "hero.greeting": "Hello, I'm",
       "hero.rolePrefix": "Specialized in",
-      "hero.bio": "A proactive and driven Business Computing undergraduate at Universiti Teknologi MARA (UiTM) Shah Alam. Skilled in aligning technology with enterprise needs through systems development, process optimization, and proven youth governance.",
-      "hero.statCgpa": "UiTM CGPA",
-      "hero.statPrograms": "Initiatives Led (YDP)",
+      "hero.bio": "Junior System Analyst with a Bachelor of Information Systems (Hons.) in Business Computing and experience in system development, data analytics, API integration, and IoT solutions. Skilled in developing system prototypes, interactive dashboards, and LoRaWAN-based systems, with experience applying technology to address business and operational requirements.",
+      "hero.statCgpa": "UiTM Degree CGPA",
+      "hero.statRoles": "Industry Roles",
+      "hero.statPrograms": "Programmes Led (YDP)",
       "hero.statPublications": "MyCite Journals",
-      "hero.statDelegations": "Int'l Delegations",
-      "hero.viewProjects": "Explore Systems & Projects",
-      "hero.downloadResume": "Download Resume PDF",
+      "hero.viewProjects": "Explore Systems & IoT",
+      "hero.downloadResume": "Download Latest Resume",
       "hero.askAi": "Ask Al-Amin AI",
 
       "about.tag": "PROFESSIONAL PROFILE",
-      "about.title": "Bridging Business Strategy with Computing Excellence",
-      "about.subtitle": "A fusion of analytical thinking, enterprise software knowledge, and proven executive leadership.",
-      "about.bioTitle": "About Al-Amin",
-      "about.bioP1": "I am an energetic and methodical Business Computing undergraduate from Universiti Teknologi MARA (UiTM) Kampus Shah Alam, maintaining a CGPA of 3.33. My academic focus centers on Business Process Management, Database Management Systems, Enterprise Information Systems (EIS), and Information System Auditing.",
-      "about.bioP2": "Beyond software engineering and system architecture, I bring exceptional leadership pedigree: serving as Yang Di-Pertua (President) of the College Representative Committee, overseeing 60+ university initiatives, representing UiTM on international delegations to Indonesia, Singapore, and Hong Kong, and authoring 3 peer-reviewed journal papers.",
-      "about.v1Title": "Business Process Alignment",
-      "about.v1Desc": "Analyzing operational bottlenecks and designing automated workflows that increase productivity.",
-      "about.v2Title": "Data-Driven Decision Making",
-      "about.v2Desc": "Transforming raw organizational data into actionable dashboards using Power BI and MySQL.",
-      "about.v3Title": "Strategic Stakeholder Governance",
-      "about.v3Desc": "Proven capability to lead large teams, manage international diplomacy, and coordinate high-stakes events.",
-      "about.refTitle": "Academic Endorsements & Mentors",
-      "about.refSubtitle": "Endorsed by senior university leadership and faculty deans for integrity, project execution, and academic discipline:",
+      "about.title": "Full-Stack Prototyping, IoT Integration & Data Analytics",
+      "about.subtitle": "A versatile Software Engineer and System Analyst bridging hardware telemetries, rapid AI development tools, and data-driven governance.",
+      "about.bioTitle": "Professional Background",
+      "about.bioP1": "I am a Junior System Analyst and Software Engineer holding a Bachelor of Information Systems (Hons.) in Business Computing from UiTM Shah Alam (CGPA 3.33) and a Diploma in Business Studies from UiTM Rembau (CGPA 3.30). My background uniquely combines commercial acumen with robust technical execution.",
+      "about.bioP2": "In industry, I build rapid production prototypes for national regulatory bodies like PDRM & CIDB leveraging cutting-edge Antigravity IDE & Cursor AI workflows, engineer smart agriculture structures using LoRaWAN IoT devices (eSawah360), and develop interactive municipal analytics dashboards for Majlis Bandaraya Ipoh (MBI) with geospatial Google Maps routing.",
+      "about.v1Title": "IoT & Sensor Architecture",
+      "about.v1Desc": "Designing LoRaWAN-based field structures, device integration, and telemetry pipelines for real-world environmental and agricultural monitoring.",
+      "about.v2Title": "Rapid Prototyping with AI IDEs",
+      "about.v2Desc": "Accelerating development cycles using Antigravity IDE, GitHub Copilot, and Cursor AI to deliver production-ready systems for institutional clients.",
+      "about.v3Title": "Interactive Geospatial Dashboards",
+      "about.v3Desc": "Optimizing API calls, frontend performance, and routing algorithms to map revenue, tax arrears, and violation hotspots.",
+      "about.refTitle": "Key Institutional References",
+      "about.refSubtitle": "Endorsed by faculty leaders and university principals for technical rigor, execution speed, and executive discipline:",
       "about.ref1Role": "Faculty Dean | Faculty of Computer & Mathematical Sciences (FSKM)",
       "about.ref2Role": "Principal (Pengetua) | Kolej Kediaman Teratai",
-      "about.verifyNote": "Direct reference verifications available upon request.",
+      "about.verifyNote": "Based in Ipoh, Perak • Available for on-site & hybrid engagements.",
       "about.contactAction": "Contact Al-Amin",
 
       "edu.tag": "ACADEMIC FOUNDATION",
-      "edu.title": "Education & Specialized Coursework",
-      "edu.degree": "Bachelor of Information Technology (Hons.) in Business Computing",
+      "edu.title": "Education & Specialized Qualifications",
+      "edu.degree": "Bachelor of Information Systems (Hons.) Business Computing",
+      "edu.diploma": "Diploma in Business Studies",
       "edu.courseworkTitle": "Core Academic Disciplines & Competencies:",
+      "edu.diplomaFocus": "Core Foundation:",
 
-      "exp.tag": "CAREER MILESTONES",
-      "exp.title": "Work & Operational Experience",
-      "exp.role": "Assistant Manager",
-      "exp.desc": "Entrusted with daily operational management, financial reconciliation, inventory control, and staff supervision. Applied business computing tools to optimize retail data and store efficiency.",
-      "exp.b1": "Managed Point of Sale (POS) infrastructure and cash reconciliation with 100% daily accuracy.",
-      "exp.b2": "Conducted inventory auditing and stock level forecasting, minimizing stockouts and shrinkage.",
-      "exp.b3": "Coordinated staff shift scheduling, conflict resolution, and customer service quality benchmarks.",
-      "exp.b4": "Synthesized weekly sales performance data to assist the franchise owner in commercial planning.",
+      "exp.tag": "INDUSTRY RECORD",
+      "exp.title": "Work & Engineering Experience",
+      "exp.simpleAdvSummary": "Leading the development of advanced system prototypes and IoT-integrated cloud platforms for governmental agencies and precision agriculture.",
+      "exp.sa1": "Developed comprehensive system prototypes for PDRM (Polis Diraja Malaysia) & CIDB using Antigravity IDE based on strict functional specifications.",
+      "exp.sa2": "Built the eSawah360 IoT structure from scratch, integrating LoRaWAN devices for real-time agricultural telemetry & soil moisture data collection.",
+      "exp.sa3": "Spearheaded system architecture design, sensor hardware integration, end-to-end testing, and rapid prototyping for smart agriculture ecosystems.",
+      "exp.peroduaSummary": "Optimized automotive digital customer acquisition funnels through real-time lead analytics and campaign monitoring.",
+      "exp.p1": "Analysed digital lead volumes and campaign performance metrics to support strategic sales forecasting and targeted lead-generation.",
+      "exp.p2": "Monitored omni-channel digital campaigns and live-stream commercial sessions while resolving customer inquiries in real time.",
+      "exp.p3": "Collaborated directly with sales consultants to enhance lead-to-booking conversion rates and customer journey satisfaction.",
+      "exp.mbiSummary": "Engineered interactive municipal intelligence dashboards and GIS routing solutions for local council operations.",
+      "exp.m1": "Developed three interactive dashboards for the Enforcement, Licensing, and Treasury departments utilizing API-driven live feeds.",
+      "exp.m2": "Optimised API calls, query payloads, and front-end rendering to boost system performance and cut data-loading latency.",
+      "exp.m3": "Implemented Google Maps routing and geospatial analysis to detect violation clusters and tax arrear hotspots across Ipoh city.",
 
-      "proj.tag": "SYSTEMS & INITIATIVES",
-      "proj.title": "Featured Projects & Case Studies",
-      "proj.subtitle": "From enterprise web architectures to digital literacy initiatives empowering local communities.",
-      "proj.tabAll": "All Projects",
-      "proj.tabSystems": "Web & Systems",
-      "proj.tabCommunity": "Community Digital Literacy",
-      "proj.tabLeadership": "Leadership & Events",
+      "proj.tag": "ENGINEERING PORTFOLIO",
+      "proj.title": "Featured Systems & Technical Innovations",
+      "proj.subtitle": "From smart agriculture LoRaWAN IoT networks to municipal dashboards and web assessment architectures.",
+      "proj.tabAll": "All Systems",
+      "proj.tabIot": "IoT & Agriculture",
+      "proj.tabDashboards": "Dashboards & Analytics",
+      "proj.tabWeb": "Web Applications",
+      "proj.tabCommunity": "Community Initiatives",
       "proj.viewDetails": "View Case Study",
-      "proj.exploreArchitecture": "Explore Architecture & Metrics",
+      "proj.exploreArchitecture": "Explore IoT Architecture",
+      "proj.exploreMbi": "Explore Municipal Analytics",
       "proj.exploreImpact": "Explore Community Impact",
-      "proj.exploreDelegation": "View International Records",
-      "proj.exploreAwards": "View Awards & Trophies",
+      "proj.esawahTitle": "eSawah360: Smart Paddy Field LoRaWAN IoT Ecosystem",
+      "proj.esawahDesc": "Engineered the entire eSawah360 IoT structure from scratch. Integrates long-range LoRaWAN telemetry devices to monitor soil moisture, water levels, and ambient conditions, enabling precision agricultural yields.",
+      "proj.mbiTitle": "MBI Geospatial City Dashboards & Route Optimization",
+      "proj.mbiDesc": "Developed three high-performance dashboards for Enforcement, Licensing, and Treasury departments. Incorporates Google Maps geospatial routing to pinpoint violation hotspots and accelerate revenue collection.",
       "proj.mikerTitle": "Miker Signature Employee Performance Assessment System",
       "proj.mikerDesc": "A full-featured web application engineered for Miker Signature. Streamlines performance appraisals via self-evaluations, supervisor scoring, weighted metrics, real-time KPI dashboards, and administrative auditing.",
       "proj.wargaTitle": "Warga Emas Celik Digital (SULAM x JPKK)",
       "proj.wargaDesc": "Served as Program Director in collaboration with JPKK Kg. Budiman. Directed hands-on digital literacy modules for senior citizens, training them on Shopee e-commerce, TikTok digital safety, and Google Calendar scheduling.",
-      "proj.delegationTitle": "Asean Educational Expedition & International LOI Signatory",
-      "proj.delegationDesc": "Official UiTM student representative in multilateral delegations across Indonesia (UIB, UNI, USI), Singapore, and Hong Kong. Led the signing of academic Letter of Intent (LOI) and published research on organizational sustainability.",
-      "proj.sidradikaTitle": "Sidradika Ensemble Production & Arts Festival Direction",
-      "proj.sidradikaDesc": "Executive Manager for Sidradika Ensemble. Led the team to capture the prestigious Gold Award (Category B5: Pop Vocal Ensemble) at the MCE International Choir Festival and multiple national-level singing championships.",
 
       "lead.tag": "EXECUTIVE LEADERSHIP",
       "lead.title": "Proven High-Impact Governance & Student Leadership",
-      "lead.subtitle": "Demonstrated track record of orchestrating 60+ university initiatives and representing UiTM on global stages.",
-      "lead.ydpBadge": "HIGHEST STUDENT RESIDENTIAL OFFICE",
-      "lead.ydpTitle": "Yang Di-Pertua (YDP / President)",
-      "lead.ydpDesc": "Spearheaded the executive governance of Kolej Kediaman Teratai, leading the committee to successfully accomplish over 60 high-impact extracurricular programs. Managed university budgets, welfare for thousands of residential students, crisis management protocols, and multi-agency partnerships.",
+      "lead.subtitle": "Demonstrated track record of orchestrating 60+ university initiatives and representing UiTM across four countries.",
+      "lead.ydpBadge": "PRESIDENT • 2024–2025",
+      "lead.ydpTitle": "President, College Representative Committee",
+      "lead.ydpDesc": "Spearheaded the executive governance of Kolej Kediaman Teratai, leading the committee to successfully accomplish over 60 high-impact programmes. Managed institutional budgets, residential student welfare, crisis protocols, and inter-university collaborations.",
       "lead.programsCompleted": "Programs Executed",
       "lead.countriesEngaged": "Countries Engaged",
-      "lead.auditCompliance": "Governance Compliance",
-      "lead.directorRoles": "Director & Strategic Leads:",
+      "lead.auditCompliance": "Audit Governance",
+      "lead.directorRoles": "Key Strategic Directorships:",
       "lead.intlRoles": "International Diplomatic Missions:",
 
       "pub.tag": "ACADEMIC RIGOR",
       "pub.title": "Published Research & Academic Papers",
-      "pub.subtitle": "Co-authored peer-reviewed research indexed in the Malaysian Citation Index (MyCite) and recognized with multiple conference best paper awards.",
+      "pub.subtitle": "Co-author of 3 peer-reviewed articles indexed in the Malaysian Citation Index (MyCite) with dual Best Paper Awards at ISDev 2024.",
       "pub.readArticle": "Read Journal Article",
 
-      "awards.tag": "ACCOLADES & RECOGNITION",
-      "awards.title": "Honors & Competitions Won",
-
       "skills.tag": "TECHNICAL ARSENAL",
-      "skills.title": "Skills, Tools & Enterprise Systems",
+      "skills.title": "Skills, Tools & AI Development Stack",
       "skills.catDev": "Programming & Database",
-      "skills.catSoftware": "Enterprise Softwares & Analytics",
-      "skills.catSoft": "Leadership & Soft Skills",
-      "skills.catLang": "Languages",
-      "skills.native": "Native / Mother Tongue",
-      "skills.fluent": "Professional Fluency",
+      "skills.catAi": "AI Development Tools",
+      "skills.catBi": "Business Intelligence & Analytics",
+      "skills.catProfessional": "Professional Skills & Languages",
+      "skills.fluentMalay": "Fluent / Native",
+      "skills.fluentEng": "Fluent (Professional)",
 
       "contact.tag": "GET IN TOUCH",
       "contact.title": "Let's Connect & Build Impact Together",
-      "contact.subtitle": "Open for internship placements, graduate trainee programs, digital transformation initiatives, and speaking engagements.",
+      "contact.subtitle": "Open for software engineering roles, system analyst opportunities, IoT prototyping, and technical collaborations.",
       "contact.infoHeading": "Contact Information",
       "contact.infoSub": "Feel free to reach out directly via WhatsApp, email, or LinkedIn. I typically respond within 24 hours.",
-      "contact.cvBoxTitle": "Curriculum Vitae (PDF)",
-      "contact.cvBoxSub": "Comprehensive academic, extracurricular and publications record.",
+      "contact.cvBoxTitle": "Latest Curriculum Vitae (PDF)",
+      "contact.cvBoxSub": "Updated with Simple Advantage, eSawah360, MBI, and Degrees.",
       "contact.formHeading": "Send a Direct Inquiry",
       "contact.nameLabel": "Your Name / Organization",
       "contact.emailLabel": "Your Email Address",
@@ -130,26 +136,26 @@ document.addEventListener('DOMContentLoaded', () => {
       "contact.messageLabel": "Your Message",
       "contact.sendBtn": "Send Message via Email / WhatsApp",
 
-      "footer.quote": "\"Empowering Organizations Through Intelligent Computing & Purposeful Leadership.\"",
+      "footer.quote": "\"Engineering Intelligent Systems, IoT Architectures, and Purposeful Leadership.\"",
 
       "modal.close": "Close",
       "modal.discuss": "Discuss with Al-Amin",
-      "modal.gotIt": "Understood, Let's Publish!",
+      "modal.gotIt": "Understood, Close Guide",
 
       "ai.title": "Ask Al-Amin AI Assistant",
-      "ai.subtitle": "Instant answers regarding qualifications, FYP, and leadership",
+      "ai.subtitle": "Instant answers regarding software roles, IoT, FYP, and leadership",
       "ai.suggested": "Popular Questions:",
-      "ai.welcomeMsg": "👋 Hello! I am the automated portfolio assistant for Al-Amin Akram. Ask me anything about his qualifications, web-based FYP system, university presidency (YDP), or research publications!",
+      "ai.welcomeMsg": "👋 Hello! I am the automated portfolio assistant for Muhammad Noor Al-Amin. Ask me about his software development at Simple Advantage, eSawah360 IoT, MBI dashboards, UiTM degrees, or leadership record!",
 
       "hosting.title": "How to Publish This Portfolio for FREE",
-      "hosting.intro": "This portfolio is built with pure, high-performance modern web standards (HTML5, Vanilla CSS, JavaScript). You can host it 100% free with automatic SSL (https://) and custom free subdomains in under 3 minutes using any of the following top platforms:"
+      "hosting.intro": "This portfolio is connected with GitHub (aminakram00/my-portfolio) and can be deployed with 1-click on Netlify:"
     },
 
     bm: {
       "nav.about": "Tentang Saya",
-      "nav.education": "Pendidikan",
       "nav.experience": "Pengalaman",
       "nav.projects": "Projek",
+      "nav.education": "Pendidikan",
       "nav.leadership": "Kepimpinan",
       "nav.publications": "Penerbitan",
       "nav.skills": "Kemahiran",
@@ -158,108 +164,113 @@ document.addEventListener('DOMContentLoaded', () => {
       "nav.home": "Utama",
       "nav.hostingGuide": "Panduan Domain Percuma",
 
-      "hero.status": "Bersedia Untuk Latihan Industri & Peluang Kerjaya",
+      "hero.status": "Jurutera Perisian & Pembangun • Terbuka Untuk Peluang Berimpak Tinggi",
       "hero.greeting": "Salam Sejahtera, Saya",
       "hero.rolePrefix": "Pengkhususan dalam",
-      "hero.bio": "Pelajar Ijazah Sarjana Muda Pengkomputeran Perniagaan yang proaktif dan berwawasan di Universiti Teknologi MARA (UiTM) Shah Alam. Mahir menyelaraskan teknologi dengan keperluan organisasi melalui pembangunan sistem, penambahbaikan proses, serta kepimpinan belia berimpak tinggi.",
-      "hero.statCgpa": "CGPA UiTM",
+      "hero.bio": "Penganalisis Sistem Muda dengan Ijazah Sarjana Muda Sistem Maklumat (Kepujian) Pengkomputeran Perniagaan dan pengalaman dalam pembangunan sistem, analitik data, integrasi API, dan penyelesaian IoT. Mahir membangunkan prototaip sistem, papan pemuka interaktif, dan sistem berasaskan LoRaWAN.",
+      "hero.statCgpa": "CGPA Ijazah UiTM",
+      "hero.statRoles": "Peranan Industri",
       "hero.statPrograms": "Program Diterajui (YDP)",
       "hero.statPublications": "Jurnal MyCite",
-      "hero.statDelegations": "Delegasi Antarabangsa",
-      "hero.viewProjects": "Lihat Sistem & Projek",
-      "hero.downloadResume": "Muat Turun Resume PDF",
+      "hero.viewProjects": "Lihat Sistem & IoT",
+      "hero.downloadResume": "Muat Turun Resume Terkini",
       "hero.askAi": "Tanya AI Al-Amin",
 
       "about.tag": "PROFIL PROFESIONAL",
-      "about.title": "Menghubungkan Strategi Perniagaan dengan Keunggulan Pengkomputeran",
-      "about.subtitle": "Gabungan pemikiran analitikal, kemahiran sistem perusahaan, dan rekod kepimpinan eksekutif yang terbukti.",
-      "about.bioTitle": "Mengenai Al-Amin",
-      "about.bioP1": "Saya merupakan mahasiswa Pengkomputeran Perniagaan UiTM Shah Alam dengan pencapaian CGPA 3.33. Fokus akademik saya tertumpu kepada Pengurusan Proses Perniagaan (BPM), Sistem Pangkalan Data (DBMS), Sistem Maklumat Perusahaan (EIS), serta Pengauditan Sistem Maklumat.",
-      "about.bioP2": "Selain kepakaran teknikal pembangunan perisian, saya memiliki rekod kepimpinan yang mantap: berkhidmat sebagai Yang Di-Pertua (YDP) Jawatankuasa Perwakilan Kolej Teratai (menjayakan 60+ program), wakil delegasi rasmi UiTM ke Indonesia, Singapura, dan Hong Kong, serta menerbitkan 3 kertas penyelidikan jurnal berindeks.",
-      "about.v1Title": "Penjajaran Proses Perniagaan",
-      "about.v1Desc": "Menganalisis kekangan operasi dan mereka bentuk aliran kerja automatik bagi meningkatkan kecekapan.",
-      "about.v2Title": "Pembuatan Keputusan Berasaskan Data",
-      "about.v2Desc": "Mengubah data mentah organisasi kepada papan pemuka visual berwawasan menggunakan Power BI dan MySQL.",
-      "about.v3Title": "Tadbir Urus & Diplomasi Strategik",
-      "about.v3Desc": "Berkeupayaan memimpin pasukan berskala besar, mengurus belanjawan rasmi, serta mengetuai delegasi merentas sempadan.",
-      "about.refTitle": "Pengesyoran Akademik & Mentor",
-      "about.refSubtitle": "Disokong oleh pucuk pimpinan universiti dan dekan fakulti atas integriti, disiplin dan pelaksanaan projek berimpak tinggi:",
+      "about.title": "Prototaip Sistem Penuh, Integrasi IoT & Analitik Data",
+      "about.subtitle": "Jurutera Perisian dan Penganalisis Sistem serba boleh yang menghubungkan telemetri perkakasan, alatan pembangunan AI pantas, dan tadbir urus berasaskan data.",
+      "about.bioTitle": "Latar Belakang Profesional",
+      "about.bioP1": "Saya merupakan Penganalisis Sistem Muda dan Jurutera Perisian berkelulusan Ijazah Sarjana Muda Sistem Maklumat (Kepujian) Pengkomputeran Perniagaan dari UiTM Shah Alam (CGPA 3.33) dan Diploma Pengajian Perniagaan dari UiTM Rembau (CGPA 3.30). Latar belakang saya menggabungkan kefahaman komersial perniagaan dan kepakaran teknikal yang kukuh.",
+      "about.bioP2": "Dalam industri, saya membina prototaip sistem untuk agensi institusi seperti PDRM & CIDB memanfaatkan Antigravity IDE & Cursor AI, mereka bentuk struktur IoT pertanian pintar menggunakan peranti LoRaWAN (eSawah360), serta membangunkan papan pemuka perbandaran interaktif Majlis Bandaraya Ipoh (MBI) dengan analisis geospatial Google Maps.",
+      "about.v1Title": "Seni Bina IoT & Sensor",
+      "about.v1Desc": "Mereka bentuk struktur nod LoRaWAN di lapangan, integrasi peranti, dan saluran data telemetri untuk pemantauan masa nyata.",
+      "about.v2Title": "Prototaip Pantas Alatan AI",
+      "about.v2Desc": "Mempercepatkan kitaran pembangunan perisian menggunakan Antigravity IDE, GitHub Copilot, dan Cursor AI bagi menghasilkan sistem sedia guna.",
+      "about.v3Title": "Papan Pemuka Geospatial Interaktif",
+      "about.v3Desc": "Mengoptimumkan panggilan API, kecekapan paparan hadapan, dan algoritma penentuan laluan untuk mengesan tunggakan cukai dan titik pelanggaran.",
+      "about.refTitle": "Rujukan Institusi Utama",
+      "about.refSubtitle": "Disokong oleh barisan kepimpinan fakulti dan pengetua universiti atas ketelitian teknikal dan disiplin pelaksanaan:",
       "about.ref1Role": "Dekan Fakulti | Fakulti Sains Komputer dan Matematik (FSKM)",
       "about.ref2Role": "Pengetua | Kolej Kediaman Teratai",
-      "about.verifyNote": "Pengesahan rujukan terus sedia disediakan atas permintaan.",
+      "about.verifyNote": "Berpangkalan di Ipoh, Perak • Terbuka untuk penempatan hibrid dan di lokasi.",
       "about.contactAction": "Hubungi Al-Amin",
 
       "edu.tag": "ASAS AKADEMIK",
-      "edu.title": "Pendidikan & Pengkhususan Kursus",
-      "edu.degree": "Sarjana Muda Teknologi Maklumat (Kepujian) Pengkomputeran Perniagaan",
+      "edu.title": "Pendidikan & Kelayakan Pengkhususan",
+      "edu.degree": "Sarjana Muda Sistem Maklumat (Kepujian) Pengkomputeran Perniagaan",
+      "edu.diploma": "Diploma Pengajian Perniagaan",
       "edu.courseworkTitle": "Disiplin & Kompetensi Akademik Utama:",
+      "edu.diplomaFocus": "Asas Komersial & Perniagaan:",
 
-      "exp.tag": "PENGALAMAN KERJAYA",
-      "exp.title": "Pengalaman Kerja & Operasi",
-      "exp.role": "Penolong Pengurus (Assistant Manager)",
-      "exp.desc": "Diamanahkan mengendalikan pengurusan operasi harian, kawalan inventori, penyelarasan kakitangan, serta pelaporan jualan. Memanfaatkan alatan pengkomputeran perniagaan bagi memacu kecekapan kedai.",
-      "exp.b1": "Menguruskan sistem Point of Sale (POS) dan rekonsiliasi tunai harian dengan ketepatan 100%.",
-      "exp.b2": "Menjalankan audit inventori berkala serta unjuran stok bagi meminimumkan pembaziran dan kekurangan barangan.",
-      "exp.b3": "Menyelaras jadual syif kakitangan, resolusi aduan pelanggan, dan kawalan kualiti perkhidmatan.",
-      "exp.b4": "Menyediakan analisis data jualan mingguan untuk menyokong perancangan komersial pemilik cawangan.",
+      "exp.tag": "REKOD INDUSTRI",
+      "exp.title": "Pengalaman Kerja & Kejuruteraan",
+      "exp.simpleAdvSummary": "Menerajui pembangunan prototaip sistem canggih dan platform awan bersepadu IoT untuk agensi kerajaan dan pertanian jitu.",
+      "exp.sa1": "Membangunkan prototaip sistem komprehensif untuk PDRM & CIDB menggunakan Antigravity IDE berdasarkan keperluan fungsian sistem.",
+      "exp.sa2": "Membina struktur IoT eSawah360 dari asas, mengintegrasikan peranti LoRaWAN untuk pemantauan telemetri pertanian & pengumpulan data kelembapan tanah.",
+      "exp.sa3": "Menyumbang kepada reka bentuk seni bina sistem, integrasi perkakasan sensor, pengujian, dan pembinaan prototaip aplikasi pertanian pintar.",
+      "exp.peroduaSummary": "Mengoptimumkan corong pemerolehan pelanggan digital automotif menerusi analitik data prospek masa nyata dan pemantauan kempen.",
+      "exp.p1": "Menganalisis volum prospek digital dan prestasi kempen bagi menyokong perancangan jualan dan strategi penjanaan leads.",
+      "exp.p2": "Memantau kempen digital dan prestasi sesi siaran langsung sambil menjawab pertanyaan pelanggan secara masa nyata.",
+      "exp.p3": "Bekerjasama dengan perunding jualan bagi meningkatkan kadar penukaran leads kepada tempahan dan kepuasan pelanggan.",
+      "exp.mbiSummary": "Membangunkan papan pemuka perbandaran pintar interaktif dan penyelesaian laluan GIS untuk operasi pihak berkuasa tempatan.",
+      "exp.m1": "Membangunkan tiga papan pemuka interaktif bagi Jabatan Penguatkuasaan, Pelesenan, dan Perbendaharaan berasaskan suapan data API.",
+      "exp.m2": "Mengoptimumkan panggilan API dan kod paparan hadapan untuk mempertingkatkan prestasi sistem dan mengurangkan masa muat data.",
+      "exp.m3": "Melaksanakan laluan Google Maps dan analisis geospatial bagi mengenal pasti kawasan tumpuan pelanggaran dan tunggakan cukai di Ipoh.",
 
-      "proj.tag": "SISTEM & INISIATIF",
-      "proj.title": "Projek Pilihan & Kajian Kes",
-      "proj.subtitle": "Dari seni bina sistem web perusahaan hingga inisiatif celik digital komuniti setempat.",
-      "proj.tabAll": "Semua Projek",
-      "proj.tabSystems": "Web & Sistem",
-      "proj.tabCommunity": "Celik Digital Komuniti",
-      "proj.tabLeadership": "Kepimpinan & Acara",
+      "proj.tag": "PORTFOLIO KEJURUTERAAN",
+      "proj.title": "Sistem Pilihan & Inovasi Teknikal",
+      "proj.subtitle": "Dari rangkaian IoT pertanian pintar LoRaWAN hingga papan pemuka geospatial bandaraya dan sistem penilaian web.",
+      "proj.tabAll": "Semua Sistem",
+      "proj.tabIot": "IoT & Pertanian",
+      "proj.tabDashboards": "Papan Pemuka & Analitik",
+      "proj.tabWeb": "Aplikasi Web",
+      "proj.tabCommunity": "Inisiatif Komuniti",
       "proj.viewDetails": "Lihat Kajian Kes",
-      "proj.exploreArchitecture": "Terokai Seni Bina & Metrik",
+      "proj.exploreArchitecture": "Terokai Seni Bina IoT",
+      "proj.exploreMbi": "Terokai Analitik Perbandaran",
       "proj.exploreImpact": "Lihat Impak Komuniti",
-      "proj.exploreDelegation": "Lihat Rekod Delegasi",
-      "proj.exploreAwards": "Lihat Anugerah & Trofi",
+      "proj.esawahTitle": "eSawah360: Ekosistem IoT Pertanian Padi Pintar LoRaWAN",
+      "proj.esawahDesc": "Membangunkan struktur IoT eSawah360 dari awal. Mengintegrasikan peranti telemetri jarak jauh LoRaWAN untuk memantau paras air, kelembapan tanah, dan suhu persekitaran bagi memaksimumkan hasil tuaian.",
+      "proj.mbiTitle": "Papan Pemuka Bandaraya Geospatial MBI & Pengoptimuman Laluan",
+      "proj.mbiDesc": "Membangunkan tiga papan pemuka berprestasi tinggi untuk Jabatan Penguatkuasaan, Pelesenan, dan Perbendaharaan Majlis Bandaraya Ipoh menggunakan integrasi Google Maps dan pengoptimuman API.",
       "proj.mikerTitle": "Sistem Penilaian Prestasi Pekerja Miker Signature",
       "proj.mikerDesc": "Aplikasi web perusahaan yang dibangunkan untuk Miker Signature. Menyelaraskan penilaian kendiri, penskoran penyelia, papan pemuka analitik KPI masa nyata, dan laporan pengauditan pentadbir.",
       "proj.wargaTitle": "Warga Emas Celik Digital (SULAM x JPKK)",
       "proj.wargaDesc": "Pengarah Program dengan kerjasama JPKK Kg. Budiman. Menerajui modul celik digital praktikal untuk warga emas meliputi transaksi Shopee yang selamat, panduan keselamatan TikTok, dan penjadualan Google Calendar.",
-      "proj.delegationTitle": "Asean Educational Expedition & Penandatanganan LOI Antarabangsa",
-      "proj.delegationDesc": "Wakil rasmi mahasiswa UiTM dalam delegasi pelbagai hala merentasi Indonesia (UIB, UNI, USI), Singapura, dan Hong Kong. Menandatangani Memorandum Persefahaman (LOI) akademik dan menerbitkan penyelidikan kemampanan pengurusan.",
-      "proj.sidradikaTitle": "Pengurusan Produksi & Festival Muzik Sidradika",
-      "proj.sidradikaDesc": "Pengurus Eksekutif Ensembel Sidradika. Membimbing pasukan merangkul Anugerah Emas (Gold Award Kategori B5: Pop Vocal Ensemble) di Festival Koir Antarabangsa MCE serta pelbagai kejuaraan nyanyian.",
 
       "lead.tag": "TADBIR URUS EKSEKUTIF",
       "lead.title": "Kepimpinan Mahasiswa Berimpak Tinggi",
-      "lead.subtitle": "Rekod kepimpinan yang terbukti dengan kejayaan menganjurkan 60+ program universiti dan mewakili UiTM di persada antarabangsa.",
-      "lead.ydpBadge": "JAWATAN TERTINGGI RESIDENSI MAHASISWA",
-      "lead.ydpTitle": "Yang Di-Pertua (YDP / Presiden)",
-      "lead.ydpDesc": "Menerajui pucuk kepimpinan Kolej Kediaman Teratai, memimpin jawatankuasa menjayakan lebih 60 program kokurikulum berimpak tinggi. Mengurus belanjawan universiti, kebajikan ribuan mahasiswa, protokol keselamatan, dan kerjasama agensi luar.",
+      "lead.subtitle": "Rekod kepimpinan yang terbukti dengan kejayaan menganjurkan 60+ program universiti dan mewakili UiTM merentasi empat negara.",
+      "lead.ydpBadge": "PRESIDEN • 2024–2025",
+      "lead.ydpTitle": "Presiden, Jawatankuasa Perwakilan Kolej",
+      "lead.ydpDesc": "Menerajui kepimpinan tertinggi Kolej Kediaman Teratai, memimpin jawatankuasa menjayakan lebih 60 program kokurikulum berimpak tinggi. Mengurus belanjawan universiti, kebajikan ribuan mahasiswa, protokol keselamatan, dan kerjasama agensi luar.",
       "lead.programsCompleted": "Program Dijayakan",
       "lead.countriesEngaged": "Negara Dihubungkan",
-      "lead.auditCompliance": "Pematuhan Tadbir Urus",
-      "lead.directorRoles": "Pengarah & Peneraju Strategik:",
+      "lead.auditCompliance": "Tadbir Urus Audit",
+      "lead.directorRoles": "Peneraju Strategik Utama:",
       "lead.intlRoles": "Misi Diplomasi Antarabangsa:",
 
       "pub.tag": "PENYELIDIKAN AKADEMIK",
       "pub.title": "Kertas Penyelidikan & Penerbitan Ilmiah",
-      "pub.subtitle": "Penulis bersama kertas penyelidikan yang diindeks dalam Malaysian Citation Index (MyCite) dan memenangi anugerah Best Paper.",
+      "pub.subtitle": "Penulis bersama 3 artikel berindeks Malaysian Citation Index (MyCite) dengan anugerah berganda Best Paper di ISDev 2024.",
       "pub.readArticle": "Baca Artikel Jurnal",
 
-      "awards.tag": "PENGIKTIRAFAN & PENCAPAIAN",
-      "awards.title": "Anugerah & Pertandingan Dimenangi",
-
       "skills.tag": "SENJATA TEKNIKAL",
-      "skills.title": "Kemahiran, Perisian & Sistem Maklumat",
+      "skills.title": "Kemahiran, Perisian & Alatan Pembangunan AI",
       "skills.catDev": "Pengaturcaraan & Pangkalan Data",
-      "skills.catSoftware": "Perisian Perusahaan & Analitis",
-      "skills.catSoft": "Kepimpinan & Kemahiran Insaniah",
-      "skills.catLang": "Bahasa Pertuturan",
-      "skills.native": "Bahasa Ibunda (Fasih)",
-      "skills.fluent": "Kefasihan Profesional",
+      "skills.catAi": "Alatan Pembangunan AI",
+      "skills.catBi": "Business Intelligence & Analitik",
+      "skills.catProfessional": "Kemahiran Profesional & Bahasa",
+      "skills.fluentMalay": "Fasih / Bahasa Ibunda",
+      "skills.fluentEng": "Kefasihan Profesional",
 
       "contact.tag": "HUBUNGI SAYA",
       "contact.title": "Mari Berhubung & Cipta Impak Bersama",
-      "contact.subtitle": "Terbuka untuk penempatan latihan industri, program eksekutif graduan, transformasi digital, dan jemputan pengacaraan/ucapan.",
+      "contact.subtitle": "Terbuka untuk jawatan jurutera perisian, penganalisis sistem, prototaip IoT, dan kolaborasi teknikal.",
       "contact.infoHeading": "Maklumat Perhubungan",
       "contact.infoSub": "Sila hubungi saya terus melalui WhatsApp, e-mel, atau LinkedIn. Saya biasanya membalas dalam tempoh 24 jam.",
-      "contact.cvBoxTitle": "Kurikulum Vitae (PDF)",
-      "contact.cvBoxSub": "Rekod komprehensif akademik, kepimpinan, dan senarai penerbitan penyelidikan.",
+      "contact.cvBoxTitle": "Kurikulum Vitae Terkini (PDF)",
+      "contact.cvBoxSub": "Dikemas kini dengan Simple Advantage, eSawah360, MBI, dan Ijazah.",
       "contact.formHeading": "Hantar Pertanyaan Terus",
       "contact.nameLabel": "Nama / Organisasi Anda",
       "contact.emailLabel": "Alamat E-mel Anda",
@@ -267,19 +278,19 @@ document.addEventListener('DOMContentLoaded', () => {
       "contact.messageLabel": "Mesej Anda",
       "contact.sendBtn": "Hantar Mesej melalui E-mel / WhatsApp",
 
-      "footer.quote": "\"Memperkasakan Organisasi Menerusi Pengkomputeran Pintar & Kepimpinan Berwawasan.\"",
+      "footer.quote": "\"Membangunkan Sistem Pintar, Seni Bina IoT, dan Kepimpinan Berwawasan.\"",
 
       "modal.close": "Tutup",
       "modal.discuss": "Bincang bersama Al-Amin",
-      "modal.gotIt": "Faham, Sedia Terbitkan!",
+      "modal.gotIt": "Faham, Tutup Panduan",
 
       "ai.title": "Pembantu AI Al-Amin",
-      "ai.subtitle": "Jawapan pantas mengenai kelayakan, projek FYP, dan kepimpinan",
+      "ai.subtitle": "Jawapan pantas mengenai peranan perisian, IoT, FYP, dan kepimpinan",
       "ai.suggested": "Soalan Popular:",
-      "ai.welcomeMsg": "👋 Salam! Saya pembantu portfolio automatik bagi Al-Amin Akram. Tanyakan apa sahaja mengenai kelayakan beliau, sistem FYP Miker Signature, kepimpinan YDP Teratai, atau penerbitan jurnal beliau!",
+      "ai.welcomeMsg": "👋 Salam! Saya pembantu portfolio automatik bagi Muhammad Noor Al-Amin. Tanyakan mengenai pengalaman beliau di Simple Advantage, eSawah360 IoT, papan pemuka MBI, atau ijazah UiTM!",
 
       "hosting.title": "Cara Menerbitkan Portfolio Ini Secara PERCUMA",
-      "hosting.intro": "Laman portfolio ini dibina menggunakan standard web moden (HTML5, Vanilla CSS, JavaScript). Anda boleh mengehoskannya 100% percuma bersama sijil SSL automatik (https://) dan domain percuma dalam masa 3 minit menggunakan platform berikut:"
+      "hosting.intro": "Portfolio ini telah disambungkan ke GitHub (aminakram00/my-portfolio) dan sedia dideploy secara 1-klik di Netlify:"
     }
   };
 
@@ -368,9 +379,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // -------------------------------------------------------------------------
   const typewriterText = document.getElementById('typewriterText');
   const roles = [
-    "Business Computing & Enterprise Systems",
-    "Employee Performance Appraisal Systems",
-    "Process Optimization & Data Analytics",
+    "Software Engineering & IoT Solutions",
+    "eSawah360 LoRaWAN Field Telemetry",
+    "PDRM & CIDB Rapid System Prototypes",
+    "MBI Geospatial Municipal Dashboards",
     "Youth Governance & Executive Leadership"
   ];
   let roleIdx = 0;
@@ -428,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -------------------------------------------------------------------------
-  // 6. Interactive Case Study Modals
+  // 6. Interactive Case Study Modals (Updated for eSawah360 & MBI)
   // -------------------------------------------------------------------------
   const caseStudyModal = document.getElementById('caseStudyModal');
   const modalTag = document.getElementById('modalTag');
@@ -439,6 +451,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const viewProjectBtns = document.querySelectorAll('.view-project-btn');
 
   const projectDetails = {
+    esawah: {
+      tag: "IoT & Smart Agriculture • Simple Advantage Sdn. Bhd.",
+      title: "eSawah360: Smart Paddy Field LoRaWAN IoT Ecosystem",
+      html: `
+        <div style="margin-bottom: 20px;">
+          <img src="assets/esawah_iot.svg" alt="eSawah360 IoT Architecture" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px;">
+          <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Engineering Scope & Problem Statement</h4>
+          <p style="margin-bottom: 14px;">Traditional paddy farming in Malaysia faces unpredictable irrigation cycles, soil pH imbalances, and unmonitored water levels leading to crop yield losses. Simple Advantage Sdn. Bhd. initiated eSawah360 to bring precision agriculture IoT to commercial rice farming.</p>
+          
+          <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Key Technical Contributions</h4>
+          <ul style="padding-left: 20px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Built IoT Structure from Scratch:</strong> Engineered the end-to-end device integration pipeline linking remote field sensors to cloud telemetry ingestion.</li>
+            <li><strong>LoRaWAN Long-Range Connectivity:</strong> Configured battery-efficient LoRaWAN nodes capable of transmitting sensor telemetry across hectares of terrain without cellular dependency.</li>
+            <li><strong>Multi-Sensor Telemetry:</strong> Live ingestion of soil moisture, ambient temperature, humidity, and water level metrics.</li>
+            <li><strong>AI-Assisted Prototyping:</strong> Leveraged <strong>Antigravity IDE & Cursor AI</strong> to architect rapid backend endpoints and analytics dashboard prototypes for stakeholders.</li>
+          </ul>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px;">
+            <span class="skill-mini-pill">✓ LoRaWAN Telemetry</span>
+            <span class="skill-mini-pill">✓ Antigravity IDE Prototyping</span>
+            <span class="skill-mini-pill">✓ Real-Time Soil & Water Monitoring</span>
+          </div>
+        </div>
+      `
+    },
+    mbi: {
+      tag: "Municipal GIS & Analytics • Majlis Bandaraya Ipoh",
+      title: "MBI Geospatial City Dashboards & Route Optimization",
+      html: `
+        <div style="margin-bottom: 20px;">
+          <img src="assets/mbi_dashboard.svg" alt="MBI Departmental Dashboards" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px;">
+          <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Municipal Challenge</h4>
+          <p style="margin-bottom: 14px;">Majlis Bandaraya Ipoh (MBI) needed consolidated, fast-loading visual dashboards for three critical civic branches: <strong>Enforcement</strong>, <strong>Licensing</strong>, and <strong>Treasury</strong> to streamline municipal surveillance and revenue recovery.</p>
+          
+          <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Engineering Deliverables</h4>
+          <ul style="padding-left: 20px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Three API-Driven Dashboards:</strong> Designed responsive interfaces displaying real-time inspection records, premise licenses, and tax arrears.</li>
+            <li><strong>API Call Optimization:</strong> Refactored backend queries and front-end fetching mechanisms, cutting data loading times by over 40%.</li>
+            <li><strong>Geospatial Routing & Hotspot Mapping:</strong> Embedded Google Maps API to plot inspection routes and highlight clusters of zoning violations and outstanding assessment tax.</li>
+          </ul>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px;">
+            <span class="skill-mini-pill">✓ Google Maps GIS</span>
+            <span class="skill-mini-pill">✓ 40% Latency Reduction</span>
+            <span class="skill-mini-pill">✓ Enforcement Hotspot Tracking</span>
+          </div>
+        </div>
+      `
+    },
     miker: {
       tag: "Final Year Capstone Project (FYP)",
       title: "Miker Signature Employee Performance Assessment System",
@@ -455,9 +516,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <li><strong>Dynamic Analytics Dashboards:</strong> Interactive charts rendering department-level performance trends and historical comparative evaluations.</li>
             <li><strong>Audit Trail & Exporting:</strong> Automated generation of evaluation reports and monthly summaries for HR compensation and training planning.</li>
           </ul>
-
-          <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Tech Stack & Methodologies</h4>
-          <p style="margin-bottom: 10px;">Built with <strong>PHP, MySQL, JavaScript, HTML5/CSS3</strong>, adhering to System Development Life Cycle (SDLC) best practices and business process optimization standards.</p>
 
           <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px;">
             <span class="skill-mini-pill">✓ 94.8% Assessment Efficiency</span>
@@ -481,47 +539,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <li><strong>Shopee & E-Commerce Safety:</strong> Training seniors on navigating product listings, detecting fake reviews, and executing secure payment transactions.</li>
             <li><strong>TikTok Digital Literacy:</strong> Safe consumption of online video news, basic creative video sharing, and fraud awareness against cyber scams.</li>
             <li><strong>Google Calendar Routine Management:</strong> Scheduling daily medical checkups, medication reminders, and community events on mobile devices.</li>
-          </ul>
-
-          <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Leadership & Role</h4>
-          <p>Served as <strong>Program Director</strong>, managing volunteer mobilization, curriculum preparation, stakeholder alignment with village elders, and post-workshop digital surveys.</p>
-        </div>
-      `
-    },
-    delegation: {
-      tag: "International Summit & Governance",
-      title: "Asean Educational Expedition & Multilateral LOI",
-      html: `
-        <div style="margin-bottom: 20px;">
-          <img src="assets/international_delegation.svg" alt="International Delegation Network" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px;">
-          <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Diplomatic Scope & Global Benchmarking</h4>
-          <p style="margin-bottom: 14px;">Represented Universiti Teknologi MARA (UiTM) Malaysia as the lead student representative in high-level multilateral delegations with Student Representative Councils from Indonesia, Singapore, and Hong Kong.</p>
-          
-          <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Key Accomplishments</h4>
-          <ul style="padding-left: 20px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 8px;">
-            <li><strong>Signatory Representative for Letter of Intent (LOI):</strong> Official student representative in the formal signing of the historic LOI between UiTM, Universitas Internasional Batam (UIB), Universitas Nagoya Indonesia (UNI), and Universitas Semarang Indonesia (USI).</li>
-            <li><strong>Co-Authored MyCite Research Paper:</strong> Evaluated the measurable impact of international programs on university organizational management sustainability (published in JISED 2024).</li>
-            <li><strong>Hong Kong Universities Benchmarking:</strong> Participated in 'Project Beyond Boundaries', benchmarking student governance and technological infrastructure in premier Hong Kong institutions.</li>
-            <li><strong>Singapura Cultural Protocol:</strong> Lead protocol officer for 'Jejak Diaspora Melayu @ Singapura 2024'.</li>
-          </ul>
-        </div>
-      `
-    },
-    sidradika: {
-      tag: "Arts Excellence & Ensemble Management",
-      title: "Sidradika Ensemble — MCE International Choir Festival",
-      html: `
-        <div style="margin-bottom: 20px;">
-          <img src="assets/sidradika.svg" alt="Sidradika Ensemble Achievements" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 16px;">
-          <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Executive Production Management</h4>
-          <p style="margin-bottom: 14px;">Served as Manager for Sidradika Ensemble, orchestrating rehearsals, financial budgets, logistics, stage choreography, and artistic direction for premier competitive festivals.</p>
-          
-          <h4 style="color: var(--text-main); margin-bottom: 8px; font-size: 1.1rem;">Major Championship Trophies</h4>
-          <ul style="padding-left: 20px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 8px;">
-            <li><strong>🏆 Gold Award:</strong> Category B5 (Pop Vocal Ensemble) at the MCE International Choir Festival.</li>
-            <li><strong>🥇 Champion:</strong> Solo Singing Competition in Karnival Budaya Kolej (KARYAKU 2024).</li>
-            <li><strong>🥇 Champion:</strong> Group Nasheed in Karnival Islam Seroja (KARIS 2024).</li>
-            <li><strong>🥈 1st Runner Up:</strong> Group Singing in Karnival Budaya Kolej (KARYAKU 2024).</li>
           </ul>
         </div>
       `
@@ -581,39 +598,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === aiAssistantModal) closeAiDialog();
   });
 
-  // Knowledge Base for the AI assistant
+  // Knowledge Base for the AI assistant updated with latest resume
   function getAiResponse(query) {
     const q = query.toLowerCase();
 
-    if (q.includes('fyp') || q.includes('miker') || q.includes('system') || q.includes('project') || q.includes('projek') || q.includes('sistem')) {
-      return "💻 <strong>Final Year Project (FYP):</strong> Al-Amin engineered a web-based <em>Employee Performance Assessment System</em> for Miker Signature. It replaces paper reviews with digital self-evaluations, supervisor rubric scoring, real-time KPI distribution graphs, and automated administrative reports to boost review transparency and efficiency.";
+    if (q.includes('iot') || q.includes('esawah') || q.includes('sawah') || q.includes('lorawan') || q.includes('sensor')) {
+      return "🌾 <strong>eSawah360 & IoT:</strong> At Simple Advantage Sdn. Bhd., Al-Amin built the entire <strong>eSawah360 IoT structure from scratch</strong>. He integrated <strong>LoRaWAN devices</strong> for agricultural monitoring, tracking soil moisture, ambient temperature, humidity, and water levels for precision farming.";
     }
 
-    if (q.includes('cgpa') || q.includes('degree') || q.includes('uitm') || q.includes('education') || q.includes('belajar') || q.includes('kelayakan')) {
-      return "🎓 <strong>Education & Credentials:</strong> Al-Amin is an undergraduate studying <em>Bachelor of Information Technology (Hons.) in Business Computing</em> at UiTM Shah Alam with a stellar <strong>CGPA of 3.33</strong> (Second Class Upper). Key disciplines include Business Process Management (BPM), Database Systems (DBMS), Enterprise Information Systems (EIS), and IT Auditing.";
+    if (q.includes('simpleadv') || q.includes('simple advantage') || q.includes('pdrm') || q.includes('cidb') || q.includes('software engineer')) {
+      return "⚡ <strong>Simple Advantage Sdn. Bhd. (Aug 2026 - Present):</strong> Working as a <em>Software Engineer & Developer</em>. Key duties include building system prototypes for <strong>PDRM & CIDB</strong> using <strong>Antigravity IDE</strong>, architecting the eSawah360 LoRaWAN IoT platform, and conducting device testing.";
     }
 
-    if (q.includes('ydp') || q.includes('lead') || q.includes('pimpin') || q.includes('kolej') || q.includes('teratai') || q.includes('activities') || q.includes('aktiviti')) {
-      return "👑 <strong>Leadership & Governance:</strong> As <em>Yang Di-Pertua (President)</em> of Kolej Kediaman Teratai, Al-Amin successfully accomplished <strong>over 60 university and residential programs</strong>! He also served as Director for Strategic Planning (Bengkel Perancangan Strategik 2025) and represented UiTM internationally.";
+    if (q.includes('mbi') || q.includes('ipoh') || q.includes('dashboard') || q.includes('majlis bandaraya')) {
+      return "🏛️ <strong>Majlis Bandaraya Ipoh (MBI) Internship (Sep - Dec 2025):</strong> Al-Amin developed <strong>three interactive dashboards</strong> for Enforcement, Licensing, and Treasury. He optimized API performance, reduced data latency, and implemented <strong>Google Maps routing and geospatial analysis</strong> to detect violation hotspots and tax arrears.";
     }
 
-    if (q.includes('paper') || q.includes('research') || q.includes('journal') || q.includes('mycite') || q.includes('jurnal') || q.includes('isdev')) {
-      return "📄 <strong>Research & Publications:</strong> Al-Amin has co-authored <strong>3 research papers indexed in MyCite (JISED)</strong>, winning <strong>two Best Paper Awards</strong> at the International Conference on Student Development (ISDev 2024) for studies on student development and hybrid orientation programs!";
+    if (q.includes('perodua') || q.includes('lead') || q.includes('sales')) {
+      return "🚗 <strong>Perodua Sales Sdn. Bhd. (Apr - July 2026):</strong> Served as a <em>Digital Leads Specialist</em>, analyzing digital lead volumes, monitoring live-session campaigns, and collaborating with sales consultants to boost lead-to-booking conversions.";
     }
 
-    if (q.includes('skill') || q.includes('tool') || q.includes('software') || q.includes('power bi') || q.includes('tech') || q.includes('kemahiran')) {
-      return "🛠️ <strong>Technical Arsenal:</strong> Al-Amin is proficient in <strong>MySQL, JavaScript, PHP, HTML/CSS, C++</strong>, as well as enterprise software including <strong>Power BI, Odoo ERP, Dolibarr, MongoDB, Weka Data Mining, Figma, and Google AI Studio</strong>. He is bilingual in English (fluent) and Bahasa Melayu (native).";
+    if (q.includes('education') || q.includes('degree') || q.includes('diploma') || q.includes('cgpa') || q.includes('uitm') || q.includes('belajar')) {
+      return "🎓 <strong>Education & Degrees:</strong><br>• <strong>Bachelor of Information Systems (Hons.) Business Computing</strong>, UiTM Shah Alam (2022–2025) — <em>Final CGPA: 3.33</em><br>• <strong>Diploma in Business Studies</strong>, UiTM Rembau (2019–2021) — <em>Final CGPA: 3.30</em>.";
     }
 
-    if (q.includes('hire') || q.includes('contact') || q.includes('interview') || q.includes('kerja') || q.includes('hubungi') || q.includes('email') || q.includes('phone') || q.includes('whatsapp')) {
-      return "🤝 <strong>Contact & Hiring:</strong> Al-Amin is actively seeking internship placements and early career opportunities in Business Computing, Systems Analysis, and Digital Transformation. You can WhatsApp him directly at <strong>+60 11-2382 4021</strong> or email at <strong>alaminakram21@gmail.com</strong>!";
+    if (q.includes('aitools') || q.includes('antigravity') || q.includes('cursor') || q.includes('copilot') || q.includes('ai tool')) {
+      return "🤖 <strong>AI Development Stack:</strong> Al-Amin utilizes modern AI development environments including <strong>Antigravity IDE, GitHub Copilot, and Cursor AI</strong> to build rapid, robust system prototypes and automate full-stack workflows.";
     }
 
-    if (q.includes('sidradika') || q.includes('award') || q.includes('singing') || q.includes('anugerah') || q.includes('menang')) {
-      return "🏆 <strong>Awards & Arts Management:</strong> Al-Amin managed the Sidradika Ensemble to win the <strong>Gold Award in Category B5 (Pop Vocal Ensemble)</strong> at the MCE International Choir Festival, along with multiple university championships in solo and group singing.";
+    if (q.includes('ydp') || q.includes('lead') || q.includes('president') || q.includes('kolej') || q.includes('teratai') || q.includes('60')) {
+      return "👑 <strong>President, College Representative Committee (2024–2025):</strong> Al-Amin led Kolej Kediaman Teratai to organize <strong>over 60 successful university programmes</strong> and represented UiTM across four countries (Indonesia, Singapore, Hong Kong).";
     }
 
-    return "✨ Al-Amin Akram is a high-achieving Business Computing talent (CGPA 3.33) with hands-on systems development experience (FYP Web System), 3x MyCite published papers, and proven leadership as YDP leading 60+ programs. Feel free to ask specifically about his FYP, CGPA, leadership, or skills!";
+    if (q.includes('paper') || q.includes('research') || q.includes('journal') || q.includes('mycite') || q.includes('isdev')) {
+      return "📄 <strong>Research & Publications:</strong> Co-author of <strong>3 MyCite-indexed articles</strong> in the Journal of Islamic, Social, Economics and Development (JISED), winning <strong>two Best Paper Awards</strong> at the International Conference on Student Development (ISDev 2024).";
+    }
+
+    if (q.includes('hire') || q.includes('contact') || q.includes('interview') || q.includes('kerja') || q.includes('hubungi') || q.includes('whatsapp') || q.includes('email')) {
+      return "🤝 <strong>Contact Al-Amin:</strong> Based in <strong>Ipoh, Perak</strong>. Reach out via WhatsApp at <strong>011-2382 4021</strong>, email at <strong>alaminakram21@gmail.com</strong>, or visit his live portfolio at <strong><a href='https://alaminakram.netlify.app/' target='_blank' style='color:#34d399;'>alaminakram.netlify.app</a></strong>!";
+    }
+
+    return "✨ Muhammad Noor Al-Amin is a Junior Software Engineer & System Analyst proficient in IoT (eSawah360 LoRaWAN), institutional prototypes (PDRM & CIDB via Antigravity IDE), municipal GIS dashboards (MBI), and executive leadership (YDP, 60+ programs). Feel free to ask about any specific experience!";
   }
 
   function appendChat(role, message) {
@@ -694,9 +719,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mailtoBody = encodeURIComponent(`From: ${name} (${email})\n\nSubject: ${subject}\n\nMessage:\n${message}`);
     const mailtoUrl = `mailto:alaminakram21@gmail.com?subject=${encodeURIComponent(subject + " - " + name)}&body=${mailtoBody}`;
 
-    // Prompt user to choose email or whatsapp
     window.location.href = mailtoUrl;
-
     showToast("Opening email client... You can also chat via WhatsApp!");
     contactForm.reset();
   });
