@@ -417,6 +417,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // -------------------------------------------------------------------------
+  // 5. Hostinger Interactive Project Filter Pills
+  // -------------------------------------------------------------------------
+  const filterPills = document.querySelectorAll('.hostinger-filter-bar .filter-pill');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      const filterVal = pill.getAttribute('data-filter');
+
+      projectCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filterVal === 'all' || category === filterVal) {
+          card.style.display = 'flex';
+          requestAnimationFrame(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          });
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(12px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 250);
+        }
+      });
+    });
+  });
+
+  // -------------------------------------------------------------------------
   // 6. Interactive Case Study Modals (Updated for eSawah360 & MBI)
   // -------------------------------------------------------------------------
   const caseStudyModal = document.getElementById('caseStudyModal');
