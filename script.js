@@ -414,30 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   typeEffect();
 
-  // -------------------------------------------------------------------------
-  // 5. Project Filtering Tabs
-  // -------------------------------------------------------------------------
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterVal = btn.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const cat = card.getAttribute('data-category');
-        if (filterVal === 'all' || cat === filterVal) {
-          card.style.display = 'flex';
-          card.style.animation = 'fadeIn 0.4s ease forwards';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
 
   // -------------------------------------------------------------------------
   // 6. Interactive Case Study Modals (Updated for eSawah360 & MBI)
@@ -571,109 +548,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === caseStudyModal) closeProjectModal();
   });
 
-  // -------------------------------------------------------------------------
-  // 7. Interactive AI Assistant / Resume Q&A ("Tanya Al-Amin")
-  // -------------------------------------------------------------------------
-  const aiAssistantModal = document.getElementById('aiAssistantModal');
-  const openAiAssistantBtn = document.getElementById('openAiAssistantBtn');
-  const closeAiModal = document.getElementById('closeAiModal');
-  const aiChatStream = document.getElementById('aiChatStream');
-  const aiChatForm = document.getElementById('aiChatForm');
-  const aiInput = document.getElementById('aiInput');
-  const chipBtns = document.querySelectorAll('.chip-btn');
 
-  openAiAssistantBtn.addEventListener('click', () => {
-    aiAssistantModal.classList.add('active');
-    aiAssistantModal.setAttribute('aria-hidden', 'false');
-    aiInput.focus();
-  });
-
-  function closeAiDialog() {
-    aiAssistantModal.classList.remove('active');
-    aiAssistantModal.setAttribute('aria-hidden', 'true');
-  }
-
-  closeAiModal.addEventListener('click', closeAiDialog);
-  aiAssistantModal.addEventListener('click', (e) => {
-    if (e.target === aiAssistantModal) closeAiDialog();
-  });
-
-  // Knowledge Base for the AI assistant updated with latest resume
-  function getAiResponse(query) {
-    const q = query.toLowerCase();
-
-    if (q.includes('iot') || q.includes('esawah') || q.includes('sawah') || q.includes('lorawan') || q.includes('sensor')) {
-      return "🌾 <strong>eSawah360 & IoT:</strong> At Simple Advantage Sdn. Bhd., Al-Amin built the entire <strong>eSawah360 IoT structure from scratch</strong>. He integrated <strong>LoRaWAN devices</strong> for agricultural monitoring, tracking soil moisture, ambient temperature, humidity, and water levels for precision farming.";
-    }
-
-    if (q.includes('simpleadv') || q.includes('simple advantage') || q.includes('pdrm') || q.includes('cidb') || q.includes('software engineer')) {
-      return "⚡ <strong>Simple Advantage Sdn. Bhd. (Aug 2026 - Present):</strong> Working as a <em>Software Engineer & Developer</em>. Key duties include building system prototypes for <strong>PDRM & CIDB</strong> using <strong>Antigravity IDE</strong>, architecting the eSawah360 LoRaWAN IoT platform, and conducting device testing.";
-    }
-
-    if (q.includes('mbi') || q.includes('ipoh') || q.includes('dashboard') || q.includes('majlis bandaraya')) {
-      return "🏛️ <strong>Majlis Bandaraya Ipoh (MBI) Internship (Sep - Dec 2025):</strong> Al-Amin developed <strong>three interactive dashboards</strong> for Enforcement, Licensing, and Treasury. He optimized API performance, reduced data latency, and implemented <strong>Google Maps routing and geospatial analysis</strong> to detect violation hotspots and tax arrears.";
-    }
-
-    if (q.includes('perodua') || q.includes('lead') || q.includes('sales')) {
-      return "🚗 <strong>Perodua Sales Sdn. Bhd. (Apr - July 2026):</strong> Served as a <em>Digital Leads Specialist</em>, analyzing digital lead volumes, monitoring live-session campaigns, and collaborating with sales consultants to boost lead-to-booking conversions.";
-    }
-
-    if (q.includes('education') || q.includes('degree') || q.includes('diploma') || q.includes('cgpa') || q.includes('uitm') || q.includes('belajar')) {
-      return "🎓 <strong>Education & Degrees:</strong><br>• <strong>Bachelor of Information Systems (Hons.) Business Computing</strong>, UiTM Shah Alam (2022–2025) — <em>Final CGPA: 3.33</em><br>• <strong>Diploma in Business Studies</strong>, UiTM Rembau (2019–2021) — <em>Final CGPA: 3.30</em>.";
-    }
-
-    if (q.includes('aitools') || q.includes('antigravity') || q.includes('cursor') || q.includes('copilot') || q.includes('ai tool')) {
-      return "🤖 <strong>AI Development Stack:</strong> Al-Amin utilizes modern AI development environments including <strong>Antigravity IDE, GitHub Copilot, and Cursor AI</strong> to build rapid, robust system prototypes and automate full-stack workflows.";
-    }
-
-    if (q.includes('ydp') || q.includes('lead') || q.includes('president') || q.includes('kolej') || q.includes('teratai') || q.includes('60')) {
-      return "👑 <strong>President, College Representative Committee (2024–2025):</strong> Al-Amin led Kolej Kediaman Teratai to organize <strong>over 60 successful university programmes</strong> and represented UiTM across four countries (Indonesia, Singapore, Hong Kong).";
-    }
-
-    if (q.includes('paper') || q.includes('research') || q.includes('journal') || q.includes('mycite') || q.includes('isdev')) {
-      return "📄 <strong>Research & Publications:</strong> Co-author of <strong>3 MyCite-indexed articles</strong> in the Journal of Islamic, Social, Economics and Development (JISED), winning <strong>two Best Paper Awards</strong> at the International Conference on Student Development (ISDev 2024).";
-    }
-
-    if (q.includes('hire') || q.includes('contact') || q.includes('interview') || q.includes('kerja') || q.includes('hubungi') || q.includes('whatsapp') || q.includes('email')) {
-      return "🤝 <strong>Contact Al-Amin:</strong> Based in <strong>Ipoh, Perak</strong>. Reach out via WhatsApp at <strong>011-2382 4021</strong>, email at <strong>alaminakram21@gmail.com</strong>, or visit his live portfolio at <strong><a href='https://alaminakram.netlify.app/' target='_blank' style='color:#34d399;'>alaminakram.netlify.app</a></strong>!";
-    }
-
-    return "✨ Muhammad Noor Al-Amin is a Junior Software Engineer & System Analyst proficient in IoT (eSawah360 LoRaWAN), institutional prototypes (PDRM & CIDB via Antigravity IDE), municipal GIS dashboards (MBI), and executive leadership (YDP, 60+ programs). Feel free to ask about any specific experience!";
-  }
-
-  function appendChat(role, message) {
-    const bubble = document.createElement('div');
-    bubble.className = `chat-bubble ${role === 'user' ? 'user-bubble' : 'bot-bubble'}`;
-    bubble.innerHTML = `<p>${message}</p>`;
-    aiChatStream.appendChild(bubble);
-    aiChatStream.scrollTop = aiChatStream.scrollHeight;
-  }
-
-  aiChatForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const query = aiInput.value.trim();
-    if (!query) return;
-
-    appendChat('user', query);
-    aiInput.value = '';
-
-    setTimeout(() => {
-      const response = getAiResponse(query);
-      appendChat('bot', response);
-    }, 300);
-  });
-
-  chipBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const queryType = btn.getAttribute('data-query');
-      let prompt = btn.textContent.replace(/^[^\s]+\s/, ''); // strip emoji
-      appendChat('user', prompt);
-      setTimeout(() => {
-        const response = getAiResponse(queryType);
-        appendChat('bot', response);
-      }, 250);
-    });
-  });
 
   // -------------------------------------------------------------------------
   // 8. Free Domain & Deployment Guide Modal

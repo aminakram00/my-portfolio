@@ -171,10 +171,6 @@
               <i class="fa-solid fa-file-pdf"></i>
               <span data-i18n="hero.downloadResume">Download Latest Resume</span>
             </a>
-            <button id="openAiAssistantBtn" class="btn btn-ai-sparkle btn-lg" title="Interactive Assistant">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-              <span data-i18n="hero.askAi">Ask Al-Amin AI</span>
-            </button>
           </div>
 
           <!-- Contact Quick Badges -->
@@ -475,14 +471,7 @@
           </p>
         </div>
 
-        <!-- Filter Tabs -->
-        <div class="project-filter-tabs">
-          <button class="filter-btn active" data-filter="all" data-i18n="proj.tabAll">All Systems</button>
-          <button class="filter-btn" data-filter="iot" data-i18n="proj.tabIot">IoT & Agriculture</button>
-          <button class="filter-btn" data-filter="dashboards" data-i18n="proj.tabDashboards">Dashboards & Analytics</button>
-          <button class="filter-btn" data-filter="web" data-i18n="proj.tabWeb">Web Applications</button>
-          <button class="filter-btn" data-filter="community" data-i18n="proj.tabCommunity">Community Initiatives</button>
-        </div>
+
 
         <!-- Projects Grid -->
         <div class="projects-grid" id="projectsGrid">
@@ -1152,55 +1141,7 @@
     </div>
   </div>
 
-  <!-- AI ASSISTANT / RESUME Q&A MODAL ("Tanya Al-Amin") -->
-  <div class="modal-backdrop" id="aiAssistantModal" aria-hidden="true" role="dialog">
-    <div class="modal-card ai-modal glass-card">
-      <div class="modal-header ai-modal-header">
-        <div class="ai-header-info">
-          <div class="ai-bot-avatar"><i class="fa-solid fa-robot"></i></div>
-          <div>
-            <h3 class="modal-title" data-i18n="ai.title">Ask Al-Amin AI Assistant</h3>
-            <p class="modal-subtitle" data-i18n="ai.subtitle">Instant answers regarding software roles, IoT, FYP, and leadership</p>
-          </div>
-        </div>
-        <button class="modal-close-btn" id="closeAiModal" aria-label="Close dialog">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
 
-      <div class="ai-modal-body">
-        <!-- Suggested Questions Prompt Chips -->
-        <div class="ai-chips-wrapper">
-          <span class="chips-label" data-i18n="ai.suggested">Popular Questions:</span>
-          <div class="ai-chips">
-            <button class="chip-btn" data-query="iot">🌾 Tell me about eSawah360 & IoT</button>
-            <button class="chip-btn" data-query="simpleadv">⚡ Work at Simple Advantage?</button>
-            <button class="chip-btn" data-query="mbi">🏛️ Dashboards for Majlis Bandaraya Ipoh?</button>
-            <button class="chip-btn" data-query="education">🎓 Education (UiTM Degree & Diploma)?</button>
-            <button class="chip-btn" data-query="aitools">🤖 What AI Development Tools does he use?</button>
-            <button class="chip-btn" data-query="ydp">👑 Leadership & 60+ Programs?</button>
-          </div>
-        </div>
-
-        <!-- Chat Conversation Stream -->
-        <div class="ai-chat-stream" id="aiChatStream">
-          <div class="chat-bubble bot-bubble">
-            <p data-i18n="ai.welcomeMsg">
-              👋 Hello! I am the automated portfolio assistant for <strong>Muhammad Noor Al-Amin</strong>. Ask me about his software development at Simple Advantage, eSawah360 IoT, MBI dashboards, UiTM degrees, or leadership record!
-            </p>
-          </div>
-        </div>
-
-        <!-- Input Area -->
-        <form id="aiChatForm" class="ai-input-form">
-          <input type="text" id="aiInput" placeholder="Type a question (e.g. Tell me about eSawah360 or PDRM prototype)..." autocomplete="off" required>
-          <button type="submit" class="btn btn-primary btn-sm">
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
 
   <!-- FREE DOMAIN & HOSTING OPTIONS GUIDE MODAL -->
   <div class="modal-backdrop" id="hostingGuideModal" aria-hidden="true" role="dialog">
