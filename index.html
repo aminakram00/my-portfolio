@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al-Amin Akram | Business Computing & IT Solutions Portfolio</title>
+  <meta name="description" content="Portfolio of Al-Amin Akram — Business Computing Undergraduate at UiTM Shah Alam (CGPA 3.33). Specialized in Enterprise Systems, Process Management, Data Analytics, and Youth Leadership.">
+  <meta name="keywords" content="Al-Amin Akram, Business Computing, UiTM Shah Alam, Portfolio, Miker Signature, IT Solutions, Power BI, Odoo, Web Developer, System Analyst">
+  <meta name="author" content="Al-Amin Akram">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Al-Amin Akram | Business Computing & IT Solutions Portfolio">
+  <meta property="og:description" content="Explore my systems development projects, academic research publications, and leadership milestones at UiTM.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/avatar_square.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons for crisp iconography -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-container" id="header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="#hero" class="brand-logo" aria-label="Al-Amin Akram Home">
+        <span class="logo-mark">AA</span>
+        <div class="logo-text">
+          <span class="name">Al-Amin Akram</span>
+          <span class="tag">Business Computing</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+        <li><a href="#education" class="nav-link" data-i18n="nav.education">Education</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#leadership" class="nav-link" data-i18n="nav.leadership">Leadership</a></li>
+        <li><a href="#publications" class="nav-link" data-i18n="nav.publications">Publications</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <!-- Action Utilities: Lang switch, Dark/Light mode, Hire/Resume -->
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <button id="langToggleBtn" class="action-btn pill-btn" aria-label="Switch Language">
+          <span class="flag-icon" id="langFlag">🇲🇾</span>
+          <span class="lang-text" id="langText">BM</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="action-btn icon-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon" id="themeIcon"></i>
+        </button>
+
+        <!-- Quick Resume Link -->
+        <a href="assets/resume.pdf" download="Al-Amin_Akram_Resume.pdf" class="btn btn-sm btn-primary download-nav-btn">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span data-i18n="nav.resume">Resume</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobileMenuBtn" class="action-btn mobile-menu-btn" aria-label="Open Mobile Menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <span class="logo-mark">AA</span>
+        <span class="name">Al-Amin Akram</span>
+      </div>
+      <button id="closeDrawerBtn" class="action-btn icon-btn" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#about" class="drawer-link" data-i18n="nav.about">About</a></li>
+      <li><a href="#education" class="drawer-link" data-i18n="nav.education">Education</a></li>
+      <li><a href="#experience" class="drawer-link" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="#projects" class="drawer-link" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#leadership" class="drawer-link" data-i18n="nav.leadership">Leadership</a></li>
+      <li><a href="#publications" class="drawer-link" data-i18n="nav.publications">Publications</a></li>
+      <li><a href="#skills" class="drawer-link" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="#contact" class="drawer-link" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="assets/resume.pdf" download="Al-Amin_Akram_Resume.pdf" class="btn btn-primary w-full">
+        <i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="hero.downloadResume">Download Resume PDF</span>
+      </a>
+      <button class="btn btn-outline w-full" id="drawerHostingBtn">
+        <i class="fa-solid fa-globe"></i> <span data-i18n="nav.hostingGuide">Free Domain Guide</span>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Content Left -->
+        <div class="hero-content">
+          <div class="status-badge-container">
+            <span class="status-indicator"></span>
+            <span class="status-text" data-i18n="hero.status">Actively Seeking Internship & Immediate Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-greeting" data-i18n="hero.greeting">Hello, I'm</span>
+            <span class="hero-name-gradient">Al-Amin Akram</span>
+          </h1>
+
+          <div class="typewriter-container">
+            <span class="typewriter-prefix" data-i18n="hero.rolePrefix">Specialized in</span>
+            <span class="typewriter-text" id="typewriterText">Business Computing & Enterprise Systems</span>
+            <span class="cursor">|</span>
+          </div>
+
+          <p class="hero-bio" data-i18n="hero.bio">
+            A proactive and driven Business Computing undergraduate at Universiti Teknologi MARA (UiTM) Shah Alam. Skilled in aligning technology with enterprise needs through systems development, process optimization, and proven youth governance.
+          </p>
+
+          <!-- Key Metrics Counter Strip -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">3.33</span>
+              <span class="stat-label" data-i18n="hero.statCgpa">UiTM CGPA</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">60+</span>
+              <span class="stat-label" data-i18n="hero.statPrograms">Initiatives Led (YDP)</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">3x</span>
+              <span class="stat-label" data-i18n="hero.statPublications">MyCite Journals</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">4+</span>
+              <span class="stat-label" data-i18n="hero.statDelegations">Int'l Delegations</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span data-i18n="hero.viewProjects">Explore Systems & Projects</span>
+            </a>
+            <a href="assets/resume.pdf" download="Al-Amin_Akram_Resume.pdf" class="btn btn-secondary btn-lg">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span data-i18n="hero.downloadResume">Download Resume PDF</span>
+            </a>
+            <button id="openAiAssistantBtn" class="btn btn-ai-sparkle btn-lg" title="Interactive Assistant">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span data-i18n="hero.askAi">Ask Al-Amin AI</span>
+            </button>
+          </div>
+
+          <!-- Contact Quick Badges -->
+          <div class="hero-quick-contacts">
+            <a href="mailto:alaminakram21@gmail.com" class="quick-contact-pill" title="Send Email">
+              <i class="fa-regular fa-envelope"></i>
+              <span>alaminakram21@gmail.com</span>
+            </a>
+            <a href="https://wa.me/601123824021?text=Hello%20Al-Amin,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" class="quick-contact-pill" title="WhatsApp Message">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>+60 11-2382 4021</span>
+            </a>
+            <a href="https://www.linkedin.com/in/al-amin-akram-55702b302" target="_blank" rel="noopener noreferrer" class="quick-contact-pill" title="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual Right -->
+        <div class="hero-visual">
+          <div class="hero-avatar-card">
+            <!-- Glow background circle -->
+            <div class="avatar-glow"></div>
+            
+            <!-- Picture container -->
+            <div class="avatar-frame">
+              <img src="assets/avatar.png" alt="Al-Amin Akram - Business Computing Undergraduate" class="avatar-img" width="188" height="333">
+            </div>
+
+            <!-- Floating Badge 1: UiTM Shah Alam -->
+            <div class="floating-badge badge-top-left glass-card">
+              <div class="badge-icon uitm-color"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="badge-info">
+                <span class="badge-title">UiTM Shah Alam</span>
+                <span class="badge-sub">B.IT (Hons) Business Comp.</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: YDP Leadership -->
+            <div class="floating-badge badge-bottom-right glass-card">
+              <div class="badge-icon gold-color"><i class="fa-solid fa-crown"></i></div>
+              <div class="badge-info">
+                <span class="badge-title">Yang Di-Pertua</span>
+                <span class="badge-sub">Kolej Kediaman Teratai</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 3: Award Winner -->
+            <div class="floating-badge badge-bottom-left glass-card">
+              <div class="badge-icon emerald-color"><i class="fa-solid fa-award"></i></div>
+              <div class="badge-info">
+                <span class="badge-title">ISDev 2024</span>
+                <span class="badge-sub">2x Best Paper Award</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="about.tag">PROFESSIONAL PROFILE</span>
+          <h2 class="section-title" data-i18n="about.title">Bridging Business Strategy with Computing Excellence</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc" data-i18n="about.subtitle">
+            A fusion of analytical thinking, enterprise software knowledge, and proven executive leadership.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Story & Philosophy -->
+          <div class="about-card glass-card">
+            <h3 class="card-title">
+              <i class="fa-solid fa-user-tie text-accent"></i>
+              <span data-i18n="about.bioTitle">About Al-Amin</span>
+            </h3>
+            <p class="about-text" data-i18n="about.bioP1">
+              I am an energetic and methodical Business Computing undergraduate from Universiti Teknologi MARA (UiTM) Kampus Shah Alam, maintaining a CGPA of <strong>3.33</strong>. My academic focus centers on Business Process Management, Database Management Systems, Enterprise Information Systems (EIS), and Information System Auditing.
+            </p>
+            <p class="about-text" data-i18n="about.bioP2">
+              Beyond software engineering and system architecture, I bring exceptional leadership pedigree: serving as <strong>Yang Di-Pertua (President)</strong> of the College Representative Committee, overseeing 60+ university initiatives, representing UiTM on international delegations to Indonesia, Singapore, and Hong Kong, and authoring 3 peer-reviewed journal papers.
+            </p>
+            
+            <div class="core-values-list">
+              <div class="value-item">
+                <div class="value-icon"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+                <div>
+                  <h4 data-i18n="about.v1Title">Business Process Alignment</h4>
+                  <p data-i18n="about.v1Desc">Analyzing operational bottlenecks and designing automated workflows that increase productivity.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <h4 data-i18n="about.v2Title">Data-Driven Decision Making</h4>
+                  <p data-i18n="about.v2Desc">Transforming raw organizational data into actionable dashboards using Power BI and MySQL.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon"><i class="fa-solid fa-people-roof"></i></div>
+                <div>
+                  <h4 data-i18n="about.v3Title">Strategic Stakeholder Governance</h4>
+                  <p data-i18n="about.v3Desc">Proven capability to lead large teams, manage international diplomacy, and coordinate high-stakes events.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic References & Credentials Card -->
+          <div class="references-card glass-card">
+            <h3 class="card-title">
+              <i class="fa-solid fa-shield-halved text-accent"></i>
+              <span data-i18n="about.refTitle">Academic Endorsements & Mentors</span>
+            </h3>
+            <p class="references-intro" data-i18n="about.refSubtitle">
+              Endorsed by senior university leadership and faculty deans for integrity, project execution, and academic discipline:
+            </p>
+
+            <div class="reference-item">
+              <div class="ref-avatar"><i class="fa-solid fa-user-graduate"></i></div>
+              <div class="ref-details">
+                <h4>Associate Prof. Dr. Norjansalika Janom</h4>
+                <p class="ref-role" data-i18n="about.ref1Role">Faculty Dean | Faculty of Computer & Mathematical Sciences (FSKM)</p>
+                <p class="ref-org">Universiti Teknologi MARA (UiTM) Shah Alam</p>
+                <a href="mailto:norjan@fskm.uitm.edu.my" class="ref-email">
+                  <i class="fa-regular fa-envelope"></i> norjan@fskm.uitm.edu.my
+                </a>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-avatar"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="ref-details">
+                <h4>Hj. Izuan Izzaidi Azmi</h4>
+                <p class="ref-role" data-i18n="about.ref2Role">Principal (Pengetua) | Kolej Kediaman Teratai</p>
+                <p class="ref-org">Universiti Teknologi MARA (UiTM) Shah Alam</p>
+                <a href="mailto:izuan124@uitm.edu.my" class="ref-email">
+                  <i class="fa-regular fa-envelope"></i> izuan124@uitm.edu.my
+                </a>
+              </div>
+            </div>
+
+            <!-- Quick Action to Connect -->
+            <div class="ref-action-box">
+              <span data-i18n="about.verifyNote">Direct reference verifications available upon request.</span>
+              <a href="#contact" class="btn btn-outline btn-sm" data-i18n="about.contactAction">Contact Al-Amin</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="edu.tag">ACADEMIC FOUNDATION</span>
+          <h2 class="section-title" data-i18n="edu.title">Education & Specialized Coursework</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="education-card glass-card">
+          <div class="edu-header">
+            <div class="edu-logo-badge">
+              <i class="fa-solid fa-university"></i>
+            </div>
+            <div class="edu-main-info">
+              <div class="edu-title-row">
+                <h3 data-i18n="edu.degree">Bachelor of Information Technology (Hons.) in Business Computing</h3>
+                <span class="timeline-badge">Oct 2022 – Present</span>
+              </div>
+              <p class="edu-institution">Universiti Teknologi MARA (UiTM), Kampus Shah Alam, Malaysia</p>
+              <div class="cgpa-pill">
+                <span class="cgpa-label">Cumulative GPA:</span>
+                <span class="cgpa-val">3.33 / 4.00</span>
+                <span class="cgpa-honors">(Second Class Upper Honours)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-coursework-container">
+            <h4 class="coursework-heading" data-i18n="edu.courseworkTitle">Core Academic Disciplines & Competencies:</h4>
+            <div class="coursework-tags">
+              <span class="tag-pill"><i class="fa-solid fa-network-wired"></i> Business Process Management (BPM)</span>
+              <span class="tag-pill"><i class="fa-solid fa-database"></i> Database Management Systems (DBMS)</span>
+              <span class="tag-pill"><i class="fa-solid fa-cubes"></i> Enterprise Information Systems (EIS)</span>
+              <span class="tag-pill"><i class="fa-solid fa-cart-shopping"></i> E-Commerce Application Development</span>
+              <span class="tag-pill"><i class="fa-solid fa-clipboard-check"></i> Information System Auditing & Assurance</span>
+              <span class="tag-pill"><i class="fa-solid fa-code"></i> Web & Mobile Application Engineering</span>
+              <span class="tag-pill"><i class="fa-solid fa-chart-pie"></i> Data Analytics & Mining</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="exp.tag">CAREER MILESTONES</span>
+          <h2 class="section-title" data-i18n="exp.title">Work & Operational Experience</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-item glass-card">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <div>
+                <h3 class="role-title" data-i18n="exp.role">Assistant Manager</h3>
+                <p class="company-name">7-Eleven Malaysia • Taman Botani, Ipoh, Perak</p>
+              </div>
+              <span class="timeline-badge">Jun 2022 – Aug 2022</span>
+            </div>
+            
+            <p class="exp-summary" data-i18n="exp.desc">
+              Entrusted with daily operational management, financial reconciliation, inventory control, and staff supervision. Applied business computing tools to optimize retail data and store efficiency.
+            </p>
+
+            <ul class="exp-bullet-list">
+              <li>
+                <i class="fa-solid fa-check text-accent"></i>
+                <span data-i18n="exp.b1">Managed Point of Sale (POS) infrastructure and cash reconciliation with 100% daily accuracy.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-accent"></i>
+                <span data-i18n="exp.b2">Conducted inventory auditing and stock level forecasting, minimizing stockouts and shrinkage.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-accent"></i>
+                <span data-i18n="exp.b3">Coordinated staff shift scheduling, conflict resolution, and customer service quality benchmarks.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-accent"></i>
+                <span data-i18n="exp.b4">Synthesized weekly sales performance data to assist the franchise owner in commercial planning.</span>
+              </li>
+            </ul>
+
+            <div class="exp-skills">
+              <span class="skill-mini-pill">POS Systems</span>
+              <span class="skill-mini-pill">Inventory Auditing</span>
+              <span class="skill-mini-pill">Team Supervision</span>
+              <span class="skill-mini-pill">Retail Analytics</span>
+              <span class="skill-mini-pill">Process Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS & SYSTEMS SHOWCASE -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="proj.tag">SYSTEMS & INITIATIVES</span>
+          <h2 class="section-title" data-i18n="proj.title">Featured Projects & Case Studies</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc" data-i18n="proj.subtitle">
+            From enterprise web architectures to digital literacy initiatives empowering local communities.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="project-filter-tabs">
+          <button class="filter-btn active" data-filter="all" data-i18n="proj.tabAll">All Projects</button>
+          <button class="filter-btn" data-filter="systems" data-i18n="proj.tabSystems">Web & Systems</button>
+          <button class="filter-btn" data-filter="community" data-i18n="proj.tabCommunity">Community Digital Literacy</button>
+          <button class="filter-btn" data-filter="leadership" data-i18n="proj.tabLeadership">Leadership & Events</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          
+          <!-- Project 1: Miker Signature Performance System -->
+          <div class="project-card glass-card" data-category="systems">
+            <div class="project-media">
+              <img src="assets/miker_system.svg" alt="Miker Signature Employee Performance Assessment System" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="miker">
+                  <i class="fa-solid fa-eye"></i> <span data-i18n="proj.viewDetails">View Case Study</span>
+                </button>
+              </div>
+              <span class="project-type-badge"><i class="fa-solid fa-laptop-code"></i> FYP Capstone</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="proj.mikerTitle">Miker Signature Employee Performance Assessment System</h3>
+              <p class="project-description" data-i18n="proj.mikerDesc">
+                A full-featured web application engineered for Miker Signature. Streamlines performance appraisals via self-evaluations, supervisor scoring, weighted metrics, real-time KPI dashboards, and administrative auditing.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5/CSS3</span>
+                <span class="tech-tag">Data Dashboards</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-text view-project-btn" data-project="miker">
+                  <span data-i18n="proj.exploreArchitecture">Explore Architecture & Metrics</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Warga Emas Celik Digital -->
+          <div class="project-card glass-card" data-category="community">
+            <div class="project-media">
+              <img src="assets/warga_emas.svg" alt="Warga Emas Celik Digital Program" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="wargaemas">
+                  <i class="fa-solid fa-eye"></i> <span data-i18n="proj.viewDetails">View Case Study</span>
+                </button>
+              </div>
+              <span class="project-type-badge community-badge"><i class="fa-solid fa-hands-holding-circle"></i> SULAM Community</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="proj.wargaTitle">Warga Emas Celik Digital (SULAM x JPKK)</h3>
+              <p class="project-description" data-i18n="proj.wargaDesc">
+                Served as Program Director in collaboration with JPKK Kg. Budiman. Directed hands-on digital literacy modules for senior citizens, training them on Shopee e-commerce, TikTok digital safety, and Google Calendar scheduling.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Digital Transformation</span>
+                <span class="tech-tag">TikTok & Shopee</span>
+                <span class="tech-tag">Google Calendar</span>
+                <span class="tech-tag">Scam Prevention</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-text view-project-btn" data-project="wargaemas">
+                  <span data-i18n="proj.exploreImpact">Explore Community Impact</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Karnival Smart Desa & Tech Awareness -->
+          <div class="project-card glass-card" data-category="leadership">
+            <div class="project-media">
+              <img src="assets/international_delegation.svg" alt="International Educational Expedition & Smart Desa" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="delegation">
+                  <i class="fa-solid fa-eye"></i> <span data-i18n="proj.viewDetails">View Case Study</span>
+                </button>
+              </div>
+              <span class="project-type-badge intl-badge"><i class="fa-solid fa-globe"></i> International Summit</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="proj.delegationTitle">Asean Educational Expedition & International LOI Signatory</h3>
+              <p class="project-description" data-i18n="proj.delegationDesc">
+                Official UiTM student representative in multilateral delegations across Indonesia (UIB, UNI, USI), Singapore, and Hong Kong. Led the signing of academic Letter of Intent (LOI) and published research on organizational sustainability.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">International Diplomacy</span>
+                <span class="tech-tag">LOI Agreement</span>
+                <span class="tech-tag">Cross-Border Governance</span>
+                <span class="tech-tag">Research Publication</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-text view-project-btn" data-project="delegation">
+                  <span data-i18n="proj.exploreDelegation">View International Records</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Sidradika Ensemble & Arts Leadership -->
+          <div class="project-card glass-card" data-category="leadership">
+            <div class="project-media">
+              <img src="assets/sidradika.svg" alt="Sidradika Ensemble Gold Award Management" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="sidradika">
+                  <i class="fa-solid fa-eye"></i> <span data-i18n="proj.viewDetails">View Case Study</span>
+                </button>
+              </div>
+              <span class="project-type-badge gold-badge"><i class="fa-solid fa-trophy"></i> Gold Award Winner</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="proj.sidradikaTitle">Sidradika Ensemble Production & Arts Festival Direction</h3>
+              <p class="project-description" data-i18n="proj.sidradikaDesc">
+                Executive Manager for Sidradika Ensemble. Led the team to capture the prestigious <strong>Gold Award (Category B5: Pop Vocal Ensemble)</strong> at the MCE International Choir Festival and multiple national-level singing championships.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Production Management</span>
+                <span class="tech-tag">Budget & Logistics</span>
+                <span class="tech-tag">Vocal Directing</span>
+                <span class="tech-tag">International Festival</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-text view-project-btn" data-project="sidradika">
+                  <span data-i18n="proj.exploreAwards">View Awards & Trophies</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & EXTRACURRICULAR EXCELLENCE -->
+    <section class="section leadership-section" id="leadership">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="lead.tag">EXECUTIVE LEADERSHIP</span>
+          <h2 class="section-title" data-i18n="lead.title">Proven High-Impact Governance & Student Leadership</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc" data-i18n="lead.subtitle">
+            Demonstrated track record of orchestrating 60+ university initiatives and representing UiTM on global stages.
+          </p>
+        </div>
+
+        <div class="leadership-grid">
+          <!-- Main Pillar: YDP Role -->
+          <div class="lead-hero-card glass-card">
+            <div class="lead-hero-badge">
+              <i class="fa-solid fa-crown text-amber"></i>
+              <span data-i18n="lead.ydpBadge">HIGHEST STUDENT RESIDENTIAL OFFICE</span>
+            </div>
+            <h3 class="lead-hero-title" data-i18n="lead.ydpTitle">Yang Di-Pertua (YDP / President)</h3>
+            <p class="lead-hero-sub">Jawatankuasa Perwakilan Kolej (JPK), Kolej Kediaman Teratai, UiTM Shah Alam</p>
+            <p class="lead-hero-text" data-i18n="lead.ydpDesc">
+              Spearheaded the executive governance of Kolej Kediaman Teratai, leading the committee to successfully accomplish <strong>over 60 high-impact extracurricular programs</strong>. Managed university budgets, welfare for thousands of residential students, crisis management protocols, and multi-agency partnerships.
+            </p>
+            <div class="lead-stats-row">
+              <div class="mini-stat">
+                <span class="num">60+</span>
+                <span class="label" data-i18n="lead.programsCompleted">Programs Executed</span>
+              </div>
+              <div class="mini-stat">
+                <span class="num">4</span>
+                <span class="label" data-i18n="lead.countriesEngaged">Countries Engaged</span>
+              </div>
+              <div class="mini-stat">
+                <span class="num">100%</span>
+                <span class="label" data-i18n="lead.auditCompliance">Governance Compliance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leadership Initiatives Cards -->
+          <div class="lead-portfolio-card glass-card">
+            <h4 class="portfolio-heading">
+              <i class="fa-solid fa-compass text-accent"></i>
+              <span data-i18n="lead.directorRoles">Director & Strategic Leads:</span>
+            </h4>
+            <ul class="roles-list">
+              <li>
+                <span class="role-badge">Director</span>
+                <div class="role-text">
+                  <strong>Bengkel Perancangan Strategik 2025</strong>
+                  <span>Formulated 5-year key performance indicators and residential roadmaps.</span>
+                </div>
+              </li>
+              <li>
+                <span class="role-badge">Director</span>
+                <div class="role-text">
+                  <strong>Asean Educational Expedition 2024: Malaysia X Indonesia</strong>
+                  <span>Bilateral cultural and academic exchange across universities.</span>
+                </div>
+              </li>
+              <li>
+                <span class="role-badge">Director</span>
+                <div class="role-text">
+                  <strong>SMART Teratai & YAKIN Teratai</strong>
+                  <span>Holistic academic excellence and student character building.</span>
+                </div>
+              </li>
+              <li>
+                <span class="role-badge deputy">Deputy Director</span>
+                <div class="role-text">
+                  <strong>1 Hari 1 Hadis & Jejak Hikmah di UTeM</strong>
+                  <span>Spiritual enrichment and cross-campus intellectual discourses.</span>
+                </div>
+              </li>
+              <li>
+                <span class="role-badge deputy">Deputy Director</span>
+                <div class="role-text">
+                  <strong>KARYAKU: Teater Komedi 2024 & Dapur Teratai Prihatin</strong>
+                  <span>Arts revival and charitable residential food support initiatives.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- International Delegations & Protocols -->
+          <div class="lead-portfolio-card glass-card">
+            <h4 class="portfolio-heading">
+              <i class="fa-solid fa-earth-americas text-accent"></i>
+              <span data-i18n="lead.intlRoles">International Diplomatic Missions:</span>
+            </h4>
+            <ul class="roles-list">
+              <li>
+                <span class="role-badge intl">UiTM Representative</span>
+                <div class="role-text">
+                  <strong>Signing Ceremony of LOI (Letter of Intent)</strong>
+                  <span>Official signatory representative between UiTM, UIB, UNI, and USI (Indonesia).</span>
+                </div>
+              </li>
+              <li>
+                <span class="role-badge intl">Protocol Unit</span>
+                <div class="role-text">
+                  <strong>Jejak Diaspora Melayu @ Singapura 2024</strong>
+                  <span>Cultural heritage preservation and bilateral networking in Singapore.</span>
+                </div>
+              </li>
+              <li>
+                <span class="role-badge intl">Program Unit</span>
+                <div class="role-text">
+                  <strong>Project Beyond Boundaries: Hong Kong Universities</strong>
+                  <span>Benchmarking educational systems with premier universities in Hong Kong.</span>
+                </div>
+              </li>
+              <li>
+                <span class="role-badge emcee">Host / Emcee</span>
+                <div class="role-text">
+                  <strong>Karnival Smart Desa & BizComp Faculty Events</strong>
+                  <span>Professional bilingual emcee for large-scale faculty and community crowds.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH & PUBLICATIONS (MyCite Indexed) -->
+    <section class="section publications-section" id="publications">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="pub.tag">ACADEMIC RIGOR</span>
+          <h2 class="section-title" data-i18n="pub.title">Published Research & Academic Papers</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc" data-i18n="pub.subtitle">
+            Co-authored peer-reviewed research indexed in the Malaysian Citation Index (MyCite) and recognized with multiple conference best paper awards.
+          </p>
+        </div>
+
+        <div class="publications-grid">
+          <!-- Paper 1 -->
+          <div class="pub-card glass-card">
+            <div class="pub-badge-row">
+              <span class="pub-status-pill mycite"><i class="fa-solid fa-book-bookmark"></i> MyCite Journal</span>
+              <span class="pub-year">JISED (2024)</span>
+            </div>
+            <h3 class="pub-title">
+              Peranan Program Pengantarabangsaan Sebagai Penanda Aras Dalam Pengukuhan Kemampanan Pengurusan Organisasi: Asean Educational Expedition 2024
+            </h3>
+            <p class="pub-authors">
+              <strong>Mohd Akram, M. N. A.-A.</strong>, Azmi, I. I., Sulaiman, F. C., Hanim, A. L. M., & Putra Darwish, P.D.
+            </p>
+            <p class="pub-journal">
+              <em>Journal of Islamic, Social, Economics and Development (JISED)</em>, 9(66), 283–290.
+            </p>
+            <div class="pub-footer">
+              <a href="https://academicinspired.com/jised/article/view/2521" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="pub.readArticle">Read Journal Article</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Paper 2 -->
+          <div class="pub-card glass-card">
+            <div class="pub-badge-row">
+              <span class="pub-status-pill award"><i class="fa-solid fa-trophy"></i> Best Paper Award</span>
+              <span class="pub-year">ISDev 2024 • JISED</span>
+            </div>
+            <h3 class="pub-title">
+              Pelaksanaan Program Panglima Subuh Ke Arah Pembentukan Sahsiah Mahasiswa: Kajian Di Kolej Kediaman Teratai, Universiti Teknologi MARA (UiTM) Shah Alam
+            </h3>
+            <p class="pub-authors">
+              Hanim, A. L. M., Azmi, I. I., Sulaiman, F. C., Mohd Kamil, P. D., & <strong>Akram, M. N. A.-A.</strong>
+            </p>
+            <p class="pub-journal">
+              <em>Journal of Islamic, Social, Economics and Development</em>, 9(66), 273–282. • <strong>Winner: Best Paper Sub Theme: Religion (ISDev 2024)</strong>
+            </p>
+            <div class="pub-footer">
+              <a href="https://academicinspired.com/jised/article/view/2520" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="pub.readArticle">Read Journal Article</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Paper 3 -->
+          <div class="pub-card glass-card">
+            <div class="pub-badge-row">
+              <span class="pub-status-pill award"><i class="fa-solid fa-trophy"></i> Best Paper Award</span>
+              <span class="pub-year">ISDev 2024 • JISED</span>
+            </div>
+            <h3 class="pub-title">
+              Program Minggu Destini Siswa (Mds): Kaji Selidik Keberkesanan Program Secara Hibrid
+            </h3>
+            <p class="pub-authors">
+              Mohd Kamil, P. D., Azmi, I. I., Sulaiman, F. C., Hanim, A. L. M., <strong>Akram, M. N.-A. A.</strong>, Baba, N., & Mohamad, F.
+            </p>
+            <p class="pub-journal">
+              <em>Journal of Islamic, Social, Economics and Development</em>, 9(66), 261–272. • <strong>Winner: Best Paper Sub Theme: University (ISDev 2024)</strong>
+            </p>
+            <div class="pub-footer">
+              <a href="https://academicinspired.com/jised/article/view/2519" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="pub.readArticle">Read Journal Article</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HONORS & AWARDS SHOWCASE -->
+    <section class="section awards-section" id="awards">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="awards.tag">ACCOLADES & RECOGNITION</span>
+          <h2 class="section-title" data-i18n="awards.title">Honors & Competitions Won</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="awards-grid">
+          <div class="award-item glass-card">
+            <div class="award-icon gold"><i class="fa-solid fa-trophy"></i></div>
+            <div class="award-text">
+              <h4>Gold Award — MCE International Choir Festival</h4>
+              <p>Category B5: Pop Vocal Ensemble (Executive Manager, Sidradika Ensemble)</p>
+            </div>
+          </div>
+
+          <div class="award-item glass-card">
+            <div class="award-icon gold"><i class="fa-solid fa-medal"></i></div>
+            <div class="award-text">
+              <h4>Champion — Anugerah Persatuan Unggul 2025</h4>
+              <p>Category Wacana Intelek (Director)</p>
+            </div>
+          </div>
+
+          <div class="award-item glass-card">
+            <div class="award-icon emerald"><i class="fa-solid fa-scroll"></i></div>
+            <div class="award-text">
+              <h4>Best Paper: Religion (ISDev 2024)</h4>
+              <p>International Conference on Student Development</p>
+            </div>
+          </div>
+
+          <div class="award-item glass-card">
+            <div class="award-icon emerald"><i class="fa-solid fa-scroll"></i></div>
+            <div class="award-text">
+              <h4>Best Paper: University (ISDev 2024)</h4>
+              <p>International Conference on Student Development</p>
+            </div>
+          </div>
+
+          <div class="award-item glass-card">
+            <div class="award-icon gold"><i class="fa-solid fa-microphone-lines"></i></div>
+            <div class="award-text">
+              <h4>Champion — Solo Singing KARYAKU 2024</h4>
+              <p>Karnival Budaya Kolej (Manager)</p>
+            </div>
+          </div>
+
+          <div class="award-item glass-card">
+            <div class="award-icon gold"><i class="fa-solid fa-users"></i></div>
+            <div class="award-text">
+              <h4>Champion — Group Nasheed KARIS 2024</h4>
+              <p>Karnival Islam Seroja (Manager)</p>
+            </div>
+          </div>
+
+          <div class="award-item glass-card">
+            <div class="award-icon silver"><i class="fa-solid fa-award"></i></div>
+            <div class="award-text">
+              <h4>1st Runner Up — Group Singing KARYAKU 2024</h4>
+              <p>Karnival Budaya Kolej (Manager)</p>
+            </div>
+          </div>
+
+          <div class="award-item glass-card">
+            <div class="award-icon silver"><i class="fa-solid fa-award"></i></div>
+            <div class="award-text">
+              <h4>1st Runner Up — Anugerah Persatuan Unggul 2025</h4>
+              <p>Category Kerohanian (Supervisor)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX & TOOLING -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="skills.tag">TECHNICAL ARSENAL</span>
+          <h2 class="section-title" data-i18n="skills.title">Skills, Tools & Enterprise Systems</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming & Databases -->
+          <div class="skill-category-card glass-card">
+            <div class="cat-header">
+              <i class="fa-solid fa-code text-accent"></i>
+              <h3 data-i18n="skills.catDev">Programming & Database</h3>
+            </div>
+            <div class="skill-chips">
+              <div class="skill-chip"><i class="fa-solid fa-database"></i> MySQL</div>
+              <div class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</div>
+              <div class="skill-chip"><i class="fa-brands fa-php"></i> PHP</div>
+              <div class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</div>
+              <div class="skill-chip"><i class="fa-solid fa-code-branch"></i> C++</div>
+            </div>
+          </div>
+
+          <!-- Enterprise Softwares & Business Tools -->
+          <div class="skill-category-card glass-card">
+            <div class="cat-header">
+              <i class="fa-solid fa-briefcase text-accent"></i>
+              <h3 data-i18n="skills.catSoftware">Enterprise Softwares & Analytics</h3>
+            </div>
+            <div class="skill-chips">
+              <div class="skill-chip"><i class="fa-solid fa-chart-column"></i> Power BI</div>
+              <div class="skill-chip"><i class="fa-solid fa-cubes"></i> Odoo ERP</div>
+              <div class="skill-chip"><i class="fa-solid fa-boxes-stacked"></i> Dolibarr ERP</div>
+              <div class="skill-chip"><i class="fa-solid fa-server"></i> MongoDB</div>
+              <div class="skill-chip"><i class="fa-solid fa-brain"></i> Weka Data Mining</div>
+              <div class="skill-chip"><i class="fa-solid fa-robot"></i> Google AI Studio</div>
+              <div class="skill-chip"><i class="fa-brands fa-figma"></i> Figma UI/UX</div>
+              <div class="skill-chip"><i class="fa-brands fa-microsoft"></i> Microsoft 365</div>
+              <div class="skill-chip"><i class="fa-solid fa-terminal"></i> VS Code</div>
+            </div>
+          </div>
+
+          <!-- Soft Skills & Leadership -->
+          <div class="skill-category-card glass-card">
+            <div class="cat-header">
+              <i class="fa-solid fa-handshake-angle text-accent"></i>
+              <h3 data-i18n="skills.catSoft">Leadership & Soft Skills</h3>
+            </div>
+            <div class="skill-chips">
+              <div class="skill-chip"><i class="fa-solid fa-bullhorn"></i> Executive Communication</div>
+              <div class="skill-chip"><i class="fa-solid fa-lightbulb"></i> Problem Solving</div>
+              <div class="skill-chip"><i class="fa-solid fa-chess"></i> Strategic Planning</div>
+              <div class="skill-chip"><i class="fa-solid fa-microphone"></i> Event Emcee & Hosting</div>
+              <div class="skill-chip"><i class="fa-solid fa-magnifying-glass"></i> Critical Thinking</div>
+              <div class="skill-chip"><i class="fa-solid fa-people-group"></i> Teamwork & Delegation</div>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="skill-category-card glass-card">
+            <div class="cat-header">
+              <i class="fa-solid fa-language text-accent"></i>
+              <h3 data-i18n="skills.catLang">Languages</h3>
+            </div>
+            <div class="lang-bars">
+              <div class="lang-bar-item">
+                <div class="lang-info">
+                  <span class="lang-name">Bahasa Melayu</span>
+                  <span class="lang-level" data-i18n="skills.native">Native / Mother Tongue</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+              </div>
+              <div class="lang-bar-item">
+                <div class="lang-info">
+                  <span class="lang-name">English</span>
+                  <span class="lang-level" data-i18n="skills.fluent">Professional Fluency</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & HIRE ME SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="contact.tag">GET IN TOUCH</span>
+          <h2 class="section-title" data-i18n="contact.title">Let's Connect & Build Impact Together</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc" data-i18n="contact.subtitle">
+            Open for internship placements, graduate trainee programs, digital transformation initiatives, and speaking engagements.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Left -->
+          <div class="contact-info-card glass-card">
+            <h3 class="contact-card-title" data-i18n="contact.infoHeading">Contact Information</h3>
+            <p class="contact-card-sub" data-i18n="contact.infoSub">
+              Feel free to reach out directly via WhatsApp, email, or LinkedIn. I typically respond within 24 hours.
+            </p>
+
+            <div class="contact-channel-list">
+              <!-- WhatsApp -->
+              <a href="https://wa.me/601123824021?text=Hello%20Al-Amin,%20I%20reviewed%20your%20portfolio%20and%20would%20love%20to%20discuss%20an%20opportunity!" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <div class="channel-icon wa"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="channel-content">
+                  <span class="channel-label">WhatsApp</span>
+                  <span class="channel-val">+60 11-2382 4021</span>
+                  <span class="channel-action">Click to chat instantly →</span>
+                </div>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:alaminakram21@gmail.com" class="contact-channel-item">
+                <div class="channel-icon mail"><i class="fa-regular fa-envelope"></i></div>
+                <div class="channel-content">
+                  <span class="channel-label">Email</span>
+                  <span class="channel-val">alaminakram21@gmail.com</span>
+                  <span class="channel-action">Send direct message →</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/al-amin-akram-55702b302" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <div class="channel-icon in"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="channel-content">
+                  <span class="channel-label">LinkedIn</span>
+                  <span class="channel-val">in/al-amin-akram-55702b302</span>
+                  <span class="channel-action">Connect on LinkedIn →</span>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="contact-channel-item no-link">
+                <div class="channel-icon loc"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="channel-content">
+                  <span class="channel-label">Location</span>
+                  <span class="channel-val">Shah Alam, Selangor / Ipoh, Perak, Malaysia</span>
+                  <span class="channel-action">Willing to relocate / hybrid / on-site</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resume Download Box inside contact -->
+            <div class="resume-cta-box">
+              <div>
+                <h4 data-i18n="contact.cvBoxTitle">Curriculum Vitae (PDF)</h4>
+                <p data-i18n="contact.cvBoxSub">Comprehensive academic, extracurricular and publications record.</p>
+              </div>
+              <a href="assets/resume.pdf" download="Al-Amin_Akram_Resume.pdf" class="btn btn-primary">
+                <i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="nav.resume">Download CV</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Direct Message Form Right -->
+          <div class="contact-form-card glass-card">
+            <h3 class="contact-card-title" data-i18n="contact.formHeading">Send a Direct Inquiry</h3>
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="contactName" data-i18n="contact.nameLabel">Your Name / Organization</label>
+                <input type="text" id="contactName" required placeholder="e.g. Sarah Tan / Petronas Digital">
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" data-i18n="contact.emailLabel">Your Email Address</label>
+                <input type="email" id="contactEmail" required placeholder="e.g. sarah@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" data-i18n="contact.subjectLabel">Subject</label>
+                <select id="contactSubject">
+                  <option value="Internship Opportunity">Internship / Job Placement</option>
+                  <option value="Project Collaboration">System Development & IT Project</option>
+                  <option value="Speaking / Emcee Request">Speaking / Emcee Engagement</option>
+                  <option value="Academic & Research Inquiry">Academic & Research Inquiry</option>
+                  <option value="General Networking">General Professional Networking</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" data-i18n="contact.messageLabel">Your Message</label>
+                <textarea id="contactMessage" rows="4" required placeholder="Briefly describe your requirements or invitation..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full" id="submitFormBtn">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span data-i18n="contact.sendBtn">Send Message via Email / WhatsApp</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-mark">AA</span>
+        <div>
+          <h4>Al-Amin Akram</h4>
+          <p>Bachelor of Information Technology (Hons.) in Business Computing • UiTM Shah Alam</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero" data-i18n="nav.home">Home</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#publications" data-i18n="nav.publications">Publications</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <button class="footer-btn-link" id="footerHostingBtn" data-i18n="nav.hostingGuide">
+          <i class="fa-solid fa-cloud-arrow-up"></i> Free Domain Guide
+        </button>
+      </div>
+
+      <div class="footer-copy">
+        <p>© 2026 Al-Amin Akram. Built with modern web standards.</p>
+        <p class="footer-quote" data-i18n="footer.quote">"Empowering Organizations Through Intelligent Computing & Purposeful Leadership."</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- CASE STUDY MODAL -->
+  <div class="modal-backdrop" id="caseStudyModal" aria-hidden="true" role="dialog">
+    <div class="modal-card glass-card">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <span class="modal-tag" id="modalTag">Case Study</span>
+          <h3 class="modal-title" id="modalTitle">Project Title</h3>
+        </div>
+        <button class="modal-close-btn" id="closeCaseStudyModal" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Content injected dynamically via script.js -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="closeCaseStudyModalBtn" data-i18n="modal.close">Close</button>
+        <a href="#contact" class="btn btn-primary" id="modalContactBtn" data-i18n="modal.discuss">Discuss with Al-Amin</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI ASSISTANT / RESUME Q&A MODAL ("Tanya Al-Amin") -->
+  <div class="modal-backdrop" id="aiAssistantModal" aria-hidden="true" role="dialog">
+    <div class="modal-card ai-modal glass-card">
+      <div class="modal-header ai-modal-header">
+        <div class="ai-header-info">
+          <div class="ai-bot-avatar"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <h3 class="modal-title" data-i18n="ai.title">Ask Al-Amin AI Assistant</h3>
+            <p class="modal-subtitle" data-i18n="ai.subtitle">Instant answers regarding qualifications, FYP, and leadership</p>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeAiModal" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="ai-modal-body">
+        <!-- Suggested Questions Prompt Chips -->
+        <div class="ai-chips-wrapper">
+          <span class="chips-label" data-i18n="ai.suggested">Popular Questions:</span>
+          <div class="ai-chips">
+            <button class="chip-btn" data-query="fyp">💻 What is Al-Amin's FYP project?</button>
+            <button class="chip-btn" data-query="cgpa">🎓 What is his CGPA & Degree?</button>
+            <button class="chip-btn" data-query="ydp">👑 What are his leadership accomplishments?</button>
+            <button class="chip-btn" data-query="papers">📄 Tell me about his research papers</button>
+            <button class="chip-btn" data-query="skills">🛠️ What software & tools can he use?</button>
+            <button class="chip-btn" data-query="hire">🤝 How can I hire or contact him?</button>
+          </div>
+        </div>
+
+        <!-- Chat Conversation Stream -->
+        <div class="ai-chat-stream" id="aiChatStream">
+          <div class="chat-bubble bot-bubble">
+            <p data-i18n="ai.welcomeMsg">
+              👋 Hello! I am the automated portfolio assistant for <strong>Al-Amin Akram</strong>. Ask me anything about his qualifications, web-based FYP system, university presidency (YDP), or research publications!
+            </p>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <form id="aiChatForm" class="ai-input-form">
+          <input type="text" id="aiInput" placeholder="Type a question (e.g. Tell me about Miker Signature system)..." autocomplete="off" required>
+          <button type="submit" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FREE DOMAIN & HOSTING OPTIONS GUIDE MODAL -->
+  <div class="modal-backdrop" id="hostingGuideModal" aria-hidden="true" role="dialog">
+    <div class="modal-card hosting-modal glass-card">
+      <div class="modal-header">
+        <div>
+          <span class="modal-tag">Free Deployment & Domain Guide</span>
+          <h3 class="modal-title" data-i18n="hosting.title">How to Publish This Portfolio for FREE</h3>
+        </div>
+        <button class="modal-close-btn" id="closeHostingModal" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body hosting-guide-content">
+        <p class="hosting-intro" data-i18n="hosting.intro">
+          This portfolio is built with pure, high-performance modern web standards (HTML5, Vanilla CSS, JavaScript). You can host it 100% free with automatic SSL (https://) and custom free subdomains in under 3 minutes using any of the following top platforms:
+        </p>
+
+        <div class="hosting-options-grid">
+          <!-- Option 1: Netlify (Same as reference site) -->
+          <div class="hosting-card glass-card">
+            <div class="hosting-card-head">
+              <span class="hosting-badge recommended">Recommended</span>
+              <h4>1. Netlify (Drag & Drop or Git)</h4>
+            </div>
+            <p>Get a free URL like: <code>alamin-akram.netlify.app</code></p>
+            <ol>
+              <li>Go to <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">app.netlify.com/drop</a> and sign in.</li>
+              <li>Drag and drop this whole <code>My Portfolio</code> folder into the browser window.</li>
+              <li>Instantly live! Go to "Site Settings" &gt; "Change site name" to customize it to <code>alaminakram.netlify.app</code>.</li>
+            </ol>
+          </div>
+
+          <!-- Option 2: Vercel -->
+          <div class="hosting-card glass-card">
+            <div class="hosting-card-head">
+              <span class="hosting-badge">Lightning Fast</span>
+              <h4>2. Vercel</h4>
+            </div>
+            <p>Get a free URL like: <code>alaminakram.vercel.app</code></p>
+            <ol>
+              <li>Push this project to a GitHub repository.</li>
+              <li>Sign in to <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a> with GitHub.</li>
+              <li>Click "Import Project", select your repo, and click "Deploy" (no build command needed).</li>
+            </ol>
+          </div>
+
+          <!-- Option 3: GitHub Pages -->
+          <div class="hosting-card glass-card">
+            <div class="hosting-card-head">
+              <span class="hosting-badge">Official & Permanent</span>
+              <h4>3. GitHub Pages</h4>
+            </div>
+            <p>Get a free URL like: <code>[username].github.io/portfolio</code></p>
+            <ol>
+              <li>Create a repository on GitHub (e.g. <code>my-portfolio</code>).</li>
+              <li>Push these files directly to the <code>main</code> branch.</li>
+              <li>Go to Repo Settings &gt; "Pages" &gt; Select branch <code>main</code> &gt; Save.</li>
+            </ol>
+          </div>
+
+          <!-- Option 4: Custom Domain with Cloudflare -->
+          <div class="hosting-card glass-card">
+            <div class="hosting-card-head">
+              <span class="hosting-badge">Professional Custom Domain</span>
+              <h4>4. Custom Free / Affordable Domain</h4>
+            </div>
+            <p>Connect your own domain (e.g. <code>alaminakram.com</code> or <code>.me</code>):</p>
+            <p>All the platforms above support free 1-click custom domain attachment with automated SSL certificates.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="closeHostingModalBtn" data-i18n="modal.gotIt">Understood, Let's Publish!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Box -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>

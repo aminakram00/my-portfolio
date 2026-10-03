@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="choirBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180e29"/>
+      <stop offset="100%" stop-color="#2e1065"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="url(#choirBg)"/>
+  <circle cx="400" cy="180" r="90" fill="url(#goldGrad)" fill-opacity="0.15" filter="blur(20px)"/>
+  
+  <!-- Trophy / Award Graphic -->
+  <circle cx="400" cy="150" r="55" fill="url(#goldGrad)"/>
+  <text x="400" y="162" fill="#1e1b4b" font-family="sans-serif" font-size="36" font-weight="bold" text-anchor="middle">🏆</text>
+
+  <text x="400" y="240" fill="#fde047" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle">GOLD AWARD WINNER</text>
+  <text x="400" y="268" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle">MCE: International Choir Festival • Pop Vocal Ensemble</text>
+  <text x="400" y="292" fill="#d8b4fe" font-family="sans-serif" font-size="13" text-anchor="middle">Managed by Al-Amin Akram • Sidradika Ensemble</text>
+
+  <!-- Accomplishment Badges -->
+  <rect x="80" y="340" width="190" height="95" rx="10" fill="#241242" stroke="#581c87" stroke-width="1"/>
+  <text x="175" y="370" fill="#fde047" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">🥇 Champion</text>
+  <text x="175" y="392" fill="#e9d5ff" font-family="sans-serif" font-size="11" text-anchor="middle">Solo Singing KARYAKU</text>
+  <text x="175" y="412" fill="#a855f7" font-family="sans-serif" font-size="10" text-anchor="middle">Manager & Vocal Direction</text>
+
+  <rect x="305" y="340" width="190" height="95" rx="10" fill="#241242" stroke="#581c87" stroke-width="1"/>
+  <text x="400" y="370" fill="#fde047" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">🥇 Champion</text>
+  <text x="400" y="392" fill="#e9d5ff" font-family="sans-serif" font-size="11" text-anchor="middle">Group Nasheed KARIS</text>
+  <text x="400" y="412" fill="#a855f7" font-family="sans-serif" font-size="10" text-anchor="middle">Manager & Producer</text>
+
+  <rect x="530" y="340" width="190" height="95" rx="10" fill="#241242" stroke="#581c87" stroke-width="1"/>
+  <text x="625" y="370" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">🥈 1st Runner Up</text>
+  <text x="625" y="392" fill="#e9d5ff" font-family="sans-serif" font-size="11" text-anchor="middle">Group Singing KARYAKU</text>
+  <text x="625" y="412" fill="#a855f7" font-family="sans-serif" font-size="10" text-anchor="middle">Ensemble Management</text>
+</svg>

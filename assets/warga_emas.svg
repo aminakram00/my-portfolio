@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0b0f19"/>
+    </linearGradient>
+    <linearGradient id="sulamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="url(#bg)"/>
+  <!-- Decorative grid & glows -->
+  <circle cx="700" cy="100" r="180" fill="#f59e0b" fill-opacity="0.1" filter="blur(40px)"/>
+  <circle cx="150" cy="400" r="150" fill="#10b981" fill-opacity="0.08" filter="blur(40px)"/>
+
+  <rect x="40" y="40" width="720" height="70" rx="12" fill="#1f2937" stroke="#374151" stroke-width="1"/>
+  <text x="70" y="75" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="bold">WARGA EMAS CELIK DIGITAL</text>
+  <text x="70" y="95" fill="#fbbf24" font-family="sans-serif" font-size="12" font-weight="600">SULAM INITIATIVE • JPKK KG. BUDIMAN • COMMUNITY DIGITAL INCLUSION</text>
+
+  <!-- Module 1: TikTok -->
+  <rect x="50" y="140" width="215" height="290" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="157" cy="200" r="35" fill="#000000" stroke="#06b6d4" stroke-width="2"/>
+  <text x="157" y="208" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="middle">📱</text>
+  <text x="157" y="260" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">TikTok & Social</text>
+  <text x="157" y="285" fill="#94a3b8" font-family="sans-serif" font-size="12" text-anchor="middle">Content Consumption & Safety</text>
+  <rect x="75" y="320" width="165" height="35" rx="6" fill="#0f172a"/>
+  <text x="157" y="342" fill="#38bdf8" font-family="sans-serif" font-size="11" text-anchor="middle">Senior Media Literacy</text>
+  <text x="157" y="390" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">✓ 100% Hands-on Assisted</text>
+
+  <!-- Module 2: Shopee -->
+  <rect x="292" y="140" width="215" height="290" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="400" cy="200" r="35" fill="#ea580c" fill-opacity="0.2" stroke="#ea580c" stroke-width="2"/>
+  <text x="400" y="208" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="middle">🛍️</text>
+  <text x="400" y="260" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Shopee E-Commerce</text>
+  <text x="400" y="285" fill="#94a3b8" font-family="sans-serif" font-size="12" text-anchor="middle">Safe Digital Transactions</text>
+  <rect x="317" y="320" width="165" height="35" rx="6" fill="#0f172a"/>
+  <text x="400" y="342" fill="#fb923c" font-family="sans-serif" font-size="11" text-anchor="middle">Scam Prevention & Buying</text>
+  <text x="400" y="390" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">✓ Practical Purchasing Lab</text>
+
+  <!-- Module 3: Google Calendar -->
+  <rect x="535" y="140" width="215" height="290" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="642" cy="200" r="35" fill="#2563eb" fill-opacity="0.2" stroke="#3b82f6" stroke-width="2"/>
+  <text x="642" y="208" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="middle">📅</text>
+  <text x="642" y="260" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Google Workspace</text>
+  <text x="642" y="285" fill="#94a3b8" font-family="sans-serif" font-size="12" text-anchor="middle">Daily Scheduling & Reminders</text>
+  <rect x="560" y="320" width="165" height="35" rx="6" fill="#0f172a"/>
+  <text x="642" y="342" fill="#60a5fa" font-family="sans-serif" font-size="11" text-anchor="middle">Routine & Medical Alerts</text>
+  <text x="642" y="390" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">✓ Senior Friendly Setup</text>
+</svg>
